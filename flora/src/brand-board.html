@@ -1,61 +1,64 @@
-<!doctype html><html><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Playfair+Display:ital,wght@0,600;1,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"><style>*{margin:0;padding:0;box-sizing:border-box}
-.logo{display:flex;align-items:center;gap:calc(18px*var(--s))}
-.fl{width:calc(92px*var(--s));height:calc(92px*var(--s))}.fl svg{width:100%;height:100%}
-.wm{font-family:Fraunces;font-weight:600;font-size:calc(104px*var(--s));line-height:.9;letter-spacing:-1px}
-.sub{font-family:'DM Sans';font-weight:500;font-size:calc(19px*var(--s));letter-spacing:calc(9.5px*var(--s));margin-top:calc(8px*var(--s));padding-left:4px}
+<!doctype html><html><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Playfair+Display:ital,wght@0,600;1,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"><style>*{margin:0;padding:0;box-sizing:border-box}
+.logo{text-align:center;display:inline-block}
+.wm{font-family:Fraunces;font-weight:500;font-size:calc(110px*var(--s));letter-spacing:calc(14px*var(--s));line-height:1;padding-left:calc(14px*var(--s))}
+.sub{font-family:'DM Sans';font-weight:500;font-size:calc(19px*var(--s));letter-spacing:calc(12px*var(--s));margin-top:calc(14px*var(--s));padding-left:calc(12px*var(--s))}
 body{width:1800px;background:#F1E8DA;font-family:'DM Sans';color:#3D2B4F;padding:80px}
-h2{font-family:'DM Sans';font-size:18px;letter-spacing:6px;font-weight:700;color:#7A63A0;margin-bottom:24px}
+h2{font-size:18px;letter-spacing:6px;font-weight:700;color:#8F79B3;margin-bottom:24px}
 .row{display:flex;gap:30px;margin-bottom:60px}
-.panel{border-radius:28px;padding:60px;display:flex;align-items:center;justify-content:center;flex:1;min-height:300px}
-.sw{flex:1;border-radius:24px;height:230px;padding:26px;display:flex;flex-direction:column;justify-content:flex-end;font-size:18px}
+.panel{border-radius:28px;padding:60px;display:flex;align-items:center;justify-content:center;flex:1;min-height:320px}
+.sw{flex:1;border-radius:24px;height:220px;padding:26px;display:flex;flex-direction:column;justify-content:flex-end;font-size:18px}
 .sw b{font-size:24px;display:block;margin-bottom:4px}
-.type{flex:1;background:#fff8;border-radius:24px;padding:36px}
-.type .s{font-size:58px;line-height:1.05;margin:10px 0 12px}
-.type small{font-size:16px;letter-spacing:3px;font-weight:700;color:#7A63A0}
-.post{width:540px;height:675px;border-radius:24px;overflow:hidden;position:relative;flex:none}
-.p1{background:#C9B6E4;padding:56px;display:flex;flex-direction:column}
-.p1 .k{font-size:17px;letter-spacing:5px;font-weight:700}
-.p1 h3{font-family:Fraunces;font-weight:600;font-size:60px;line-height:1.02;margin-top:26px}
-.p1 h3 i{font-family:'Playfair Display';font-style:italic;font-weight:500}
-.p1 p{font-size:22px;line-height:1.45;margin-top:22px}
-.hl{background:#F5E3A0;padding:0 8px;border-radius:6px}
-.p1 .ft{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-size:18px;font-weight:500}
-.p2{background:#3D2B4F;color:#F1E8DA;padding:56px;display:flex;flex-direction:column}
-.p2 .big{font-family:Fraunces;font-weight:700;font-size:120px;line-height:1;color:#F5E3A0}
-.p2 h3{font-family:Fraunces;font-weight:400;font-size:40px;line-height:1.15;margin-top:18px}
-.p2 .tag{align-self:flex-start;border:1.5px solid #C9B6E4;color:#C9B6E4;border-radius:30px;padding:8px 20px;font-size:16px;letter-spacing:4px;font-weight:700}
-.p2 .ft{margin-top:auto;font-size:18px;color:#C9B6E4}
-.p3{background:#F1E8DA;border:2px solid #E2D5C2;padding:56px;display:flex;flex-direction:column}
-.p3 h3{font-family:Fraunces;font-weight:600;font-size:46px;line-height:1.08}
-.p3 ol{margin-top:28px;list-style:none;counter-reset:n}
-.p3 li{counter-increment:n;font-size:22px;line-height:1.35;padding:14px 0;border-bottom:1px solid #E2D5C2;display:flex;gap:18px}
-.p3 li::before{content:counter(n);font-family:Fraunces;font-weight:700;color:#7A63A0;font-size:28px;width:24px}
-.p3 .cta{margin-top:auto;background:#3D2B4F;color:#F1E8DA;border-radius:40px;padding:16px 26px;font-weight:700;font-size:19px;align-self:flex-start}
-.mini{width:44px;height:44px}
+.type{flex:1;background:#FBF7F0;border-radius:24px;padding:36px}
+.type .s{font-size:56px;line-height:1.05;margin:10px 0 12px}
+.type small{font-size:16px;letter-spacing:3px;font-weight:700;color:#8F79B3}
+.post{width:526px;height:658px;border-radius:24px;overflow:hidden;position:relative;flex:none;padding:56px;display:flex;flex-direction:column}
+.k{font-size:16px;letter-spacing:5px;font-weight:700}
+h3{font-family:Fraunces;font-weight:500;line-height:1.05}
+h3 i{font-family:'Playfair Display';font-style:italic;font-weight:500}
+.ft{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:17px;font-weight:500}
+.hl{background:#FBF7F0;padding:0 8px;border-radius:6px}
+.tdeco{position:absolute;width:150px;height:210px;right:40px;bottom:30px;opacity:.9}
+.p3 ol{margin-top:26px;list-style:none;counter-reset:n}
+.p3 li{counter-increment:n;font-size:21px;line-height:1.35;padding:14px 0;border-bottom:1px solid #DCCDB8;display:flex;gap:18px}
+.p3 li::before{content:counter(n);font-family:Fraunces;color:#8F79B3;font-size:28px;width:24px}
+.cta{background:#C9B6E4;border-radius:40px;padding:15px 26px;font-weight:700;font-size:18px;align-self:flex-start}
 </style></head><body>
 <h2>LOGO</h2>
 <div class="row">
-<div class="panel" style="background:#FBF7F0"><div class="logo" style="--s:1.3;color:#3D2B4F"><div class="fl"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(0 50 50)" fill="#C9B6E4" stroke="#3D2B4F" stroke-width="3.2"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(72 50 50)" fill="#C9B6E4" stroke="#3D2B4F" stroke-width="3.2"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(144 50 50)" fill="#C9B6E4" stroke="#3D2B4F" stroke-width="3.2"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(216 50 50)" fill="#C9B6E4" stroke="#3D2B4F" stroke-width="3.2"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(288 50 50)" fill="#C9B6E4" stroke="#3D2B4F" stroke-width="3.2"/><circle cx="50" cy="50" r="9" fill="#F5E3A0" stroke="#3D2B4F" stroke-width="3.2"/></svg></div><div><div class="wm">flora</div><div class="sub" style="color:#7A63A0">MARKETING</div></div></div></div>
-<div class="panel" style="background:#3D2B4F"><div class="logo" style="--s:1.3;color:#F1E8DA"><div class="fl"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(0 50 50)" fill="#5A4470" stroke="#F1E8DA" stroke-width="3.2"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(72 50 50)" fill="#5A4470" stroke="#F1E8DA" stroke-width="3.2"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(144 50 50)" fill="#5A4470" stroke="#F1E8DA" stroke-width="3.2"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(216 50 50)" fill="#5A4470" stroke="#F1E8DA" stroke-width="3.2"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(288 50 50)" fill="#5A4470" stroke="#F1E8DA" stroke-width="3.2"/><circle cx="50" cy="50" r="9" fill="#F5E3A0" stroke="#F1E8DA" stroke-width="3.2"/></svg></div><div><div class="wm">flora</div><div class="sub" style="color:#C9B6E4">MARKETING</div></div></div></div>
-<div class="panel" style="background:#C9B6E4;flex:.55"><div style="width:230px;height:230px;border-radius:50%;background:#C9B6E4;display:grid;place-items:center;box-shadow:0 0 0 10px #fff6"><div style="width:140px;height:140px"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(0 50 50)" fill="#F1E8DA" stroke="#3D2B4F" stroke-width="2.6"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(72 50 50)" fill="#F1E8DA" stroke="#3D2B4F" stroke-width="2.6"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(144 50 50)" fill="#F1E8DA" stroke="#3D2B4F" stroke-width="2.6"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(216 50 50)" fill="#F1E8DA" stroke="#3D2B4F" stroke-width="2.6"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(288 50 50)" fill="#F1E8DA" stroke="#3D2B4F" stroke-width="2.6"/><circle cx="50" cy="50" r="9" fill="#F5E3A0" stroke="#3D2B4F" stroke-width="2.6"/></svg></div></div></div>
+<div class="panel" style="background:#FBF7F0"><div class="logo" style="--s:1.1;color:#3D2B4F"><div class="wm">FLORA</div><div class="sub" style="color:#8F79B3">MARKETING</div></div></div>
+<div class="panel" style="background:#C9B6E4"><div class="logo" style="--s:1.1;color:#3D2B4F"><div class="wm">FLORA</div><div class="sub" style="color:#5E4A7C">MARKETING</div></div></div>
+</div>
+<h2>ELEMENTO GRÁFICO (SE USA APARTE DEL LOGO) Y FOTOS DE PERFIL</h2>
+<div class="row">
+<div class="panel" style="background:#FBF7F0;flex:1"><div style="width:170px;height:238px"><svg viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#3D2B4F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M32 60 C26 46 26 32 28 20 C34 26 38 30 41 36 C44 26 47 19 50 12 C53 19 56 26 59 36 C62 30 66 26 72 20 C74 32 74 46 68 60 C63 70 37 70 32 60 Z"/>
+<path d="M41 36 C44 48 56 48 59 36"/><path d="M50 68 L50 132"/>
+<path d="M50 122 C40 114 32 102 30 88 C40 94 47 106 50 118"/><path d="M50 112 C58 106 64 98 66 90 C60 92 54 98 50 106"/></svg></div></div>
+<div class="panel" style="background:#C9B6E4;flex:1"><div style="width:230px;height:230px;border-radius:50%;background:#C9B6E4;box-shadow:0 0 0 3px #3D2B4F33;display:grid;place-items:center"><div style="width:110px;height:154px;margin-top:8px"><svg viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#3D2B4F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M32 60 C26 46 26 32 28 20 C34 26 38 30 41 36 C44 26 47 19 50 12 C53 19 56 26 59 36 C62 30 66 26 72 20 C74 32 74 46 68 60 C63 70 37 70 32 60 Z"/>
+<path d="M41 36 C44 48 56 48 59 36"/><path d="M50 68 L50 132"/>
+<path d="M50 122 C40 114 32 102 30 88 C40 94 47 106 50 118"/><path d="M50 112 C58 106 64 98 66 90 C60 92 54 98 50 106"/></svg></div></div></div>
+<div class="panel" style="background:#C9B6E4;flex:1"><div style="width:230px;height:230px;border-radius:50%;background:#F1E8DA;box-shadow:0 0 0 3px #3D2B4F33;display:grid;place-items:center"><div class="logo" style="--s:0.36;color:#3D2B4F"><div class="wm">FLORA</div><div class="sub" style="color:#8F79B3">MARKETING</div></div></div></div>
 </div>
 <h2>PALETA</h2>
 <div class="row">
-<div class="sw" style="background:#C9B6E4"><b>Lila pastel</b>#C9B6E4 · principal</div>
-<div class="sw" style="background:#FBF7F0;border:2px solid #E2D5C2"><b>Beige</b>#F1E8DA · fondos</div>
-<div class="sw" style="background:#3D2B4F;color:#F1E8DA"><b>Berenjena</b>#3D2B4F · textos y títulos</div>
-<div class="sw" style="background:#F5E3A0;flex:.6"><b>Amarillo</b>#F5E3A0 · solo detalles</div>
+<div class="sw" style="background:#FBF7F0;border:2px solid #E2D5C2"><b>Beige</b>#F1E8DA / crema #FBF7F0 · fondos</div>
+<div class="sw" style="background:#C9B6E4"><b>Lila pastel</b>#C9B6E4 · color principal</div>
+<div class="sw" style="background:#8F79B3;color:#FBF7F0;flex:.7"><b>Lila profundo</b>#8F79B3 · detalles</div>
+<div class="sw" style="background:#3D2B4F;color:#FBF7F0;flex:.7"><b>Ciruela</b>#3D2B4F · solo textos</div>
 </div>
 <h2>TIPOGRAFÍAS</h2>
 <div class="row">
-<div class="type"><small>FRAUNCES · TÍTULOS</small><div class="s" style="font-family:Fraunces;font-weight:600">Hago florecer negocios</div><div>Para títulos, números grandes y el logo.</div></div>
-<div class="type"><small>PLAYFAIR DISPLAY · ACENTOS</small><div class="s" style="font-family:'Playfair Display';font-style:italic;font-weight:500">con trayectoria</div><div>En itálica, para resaltar una palabra o frase.</div></div>
-<div class="type"><small>DM SANS · TEXTOS</small><div class="s" style="font-family:'DM Sans';font-weight:500;font-size:46px">Vendé en todo el país.</div><div>Para textos, datos, botones y etiquetas.</div></div>
+<div class="type"><small>FRAUNCES · TÍTULOS Y LOGO</small><div class="s" style="font-family:Fraunces;font-weight:500">Hago crecer negocios</div><div>Para títulos, números grandes y el logo.</div></div>
+<div class="type"><small>PLAYFAIR DISPLAY · ACENTOS</small><div class="s" style="font-family:'Playfair Display';font-style:italic;font-weight:500">con trayectoria</div><div>En itálica, para resaltar una palabra.</div></div>
+<div class="type"><small>DM SANS · TEXTOS</small><div class="s" style="font-family:'DM Sans';font-weight:500;font-size:46px">Vendé en todo el país.</div><div>Para textos, datos y botones.</div></div>
 </div>
 <h2>EJEMPLOS DE PUBLICACIONES (4:5)</h2>
 <div class="row" style="margin-bottom:0">
-<div class="post p1"><div class="k">NEGOCIOS CON TRAYECTORIA</div><h3>20 años siendo los mejores de tu ciudad. <i>¿Y el resto del país?</i></h3><p>Tu negocio ya demostró que funciona. Te ayudo a que <span class="hl">venda online en todo el país</span>, sin abrir otra sucursal.</p><div class="ft"><span>@floramarketing.ar</span><div class="mini"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(0 50 50)" fill="#C9B6E4" stroke="#3D2B4F" stroke-width="3.2"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(72 50 50)" fill="#C9B6E4" stroke="#3D2B4F" stroke-width="3.2"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(144 50 50)" fill="#C9B6E4" stroke="#3D2B4F" stroke-width="3.2"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(216 50 50)" fill="#C9B6E4" stroke="#3D2B4F" stroke-width="3.2"/><ellipse cx="50" cy="29" rx="12.5" ry="20" transform="rotate(288 50 50)" fill="#C9B6E4" stroke="#3D2B4F" stroke-width="3.2"/><circle cx="50" cy="50" r="9" fill="#F5E3A0" stroke="#3D2B4F" stroke-width="3.2"/></svg></div></div></div>
-<div class="post p2"><span class="tag">CASO REAL</span><div class="big" style="margin-top:50px">x4</div><h3>Una tienda de deportes pasó de 3.000 a 13.000 USD en un mes.</h3><div class="ft">Deslizá y te cuento cómo →</div></div>
-<div class="post p3"><h3>3 señales de que tu local está listo para vender online</h3><ol><li>Te escriben de otras ciudades preguntando por envíos.</li><li>Tenés stock que no rota en tu zona.</li><li>Tu Instagram muestra, pero no vende.</li></ol><div class="cta">Escribime DIAGNÓSTICO</div></div>
-</div>
-</body></html>
+<div class="post" style="background:#C9B6E4"><div class="k">NEGOCIOS CON TRAYECTORIA</div><h3 style="font-size:58px;margin-top:26px">20 años siendo los mejores de tu ciudad. <i>¿Y el resto del país?</i></h3><p style="font-size:21px;line-height:1.45;margin-top:22px">Tu negocio ya demostró que funciona. Te ayudo a que <span class="hl">venda online en todo el país</span>, sin abrir otra sucursal.</p><div class="ft"><span>@floramarketing.ar</span><span style="font-family:Fraunces;letter-spacing:4px">FLORA</span></div></div>
+<div class="post" style="background:#FBF7F0;border:2px solid #E2D5C2"><div class="k" style="color:#8F79B3">CASO REAL</div><div style="font-family:Fraunces;font-size:130px;line-height:1;margin-top:40px;color:#8F79B3">x4</div><h3 style="font-size:40px;margin-top:18px;max-width:380px">Una tienda de deportes pasó de 3.000 a 13.000 USD en un mes.</h3><div class="ft"><span>Deslizá y te cuento cómo →</span></div><div class="tdeco"><svg viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#8F79B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M32 60 C26 46 26 32 28 20 C34 26 38 30 41 36 C44 26 47 19 50 12 C53 19 56 26 59 36 C62 30 66 26 72 20 C74 32 74 46 68 60 C63 70 37 70 32 60 Z"/>
+<path d="M41 36 C44 48 56 48 59 36"/><path d="M50 68 L50 132"/>
+<path d="M50 122 C40 114 32 102 30 88 C40 94 47 106 50 118"/><path d="M50 112 C58 106 64 98 66 90 C60 92 54 98 50 106"/></svg></div></div>
+<div class="post p3" style="background:#F1E8DA;border:2px solid #E2D5C2"><h3 style="font-size:44px">3 señales de que tu local está listo para vender online</h3><ol><li>Te escriben de otras ciudades preguntando por envíos.</li><li>Tenés stock que no rota en tu zona.</li><li>Tu Instagram muestra, pero no vende.</li></ol><div class="cta" style="margin-top:auto">Escribime DIAGNÓSTICO</div></div>
+</div></body></html>
