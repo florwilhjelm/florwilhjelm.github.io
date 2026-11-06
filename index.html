@@ -3,424 +3,378 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flor | faw.marketing</title>
-  <meta name="description" content="Trafficker digital especializada en Meta Ads, TikTok Ads y Pinterest Ads. Ayudo a negocios a vender más con publicidad que realmente funciona." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <title>Flora Marketing | Tu local, vendiendo en todo el país</title>
+  <meta name="description" content="Ayudo a negocios con trayectoria a vender online en todo el país: publicidad en Meta, TikTok y Pinterest, Tienda Nube y contenido. La Plata, CABA y online." />
+  <meta property="og:title" content="Flora Marketing | Tu local, vendiendo en todo el país" />
+  <meta property="og:description" content="Publicidad, Tienda Nube y contenido para negocios con trayectoria. Pedí tu diagnóstico." />
+  <meta property="og:image" content="assets/icono.png" />
+  <meta name="theme-color" content="#F1E8DA" />
+  <link rel="icon" href="assets/icono.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Playfair+Display:ital,wght@1,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --rose: #c084a0;
-      --rose-light: #f5eef3;
-      --rose-mid: #e8d0dc;
-      --dark: #2a1f27;
-      --muted: #7a6272;
-      --text: #3d2f39;
-      --white: #ffffff;
-      --radius: 14px;
+      --beige: #F1E8DA;
+      --crema: #FBF7F0;
+      --lila: #C9B6E4;
+      --lila-suave: #E9DFF5;
+      --lila-profundo: #8F79B3;
+      --ciruela: #3D2B4F;
+      --texto: #4A3B5C;
+      --linea: #E2D5C2;
+      --radio: 22px;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); line-height: 1.7; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--crema); color: var(--texto); line-height: 1.6; font-size: 17px; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 500; color: var(--ciruela); line-height: 1.12; }
+    h1 i, h2 i { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; color: var(--lila-profundo); }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    .tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--lila-profundo); margin-bottom: 14px; }
 
     /* NAV */
-    nav { position: sticky; top: 0; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--rose-mid); padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; z-index: 100; }
-    .nav-logo { font-weight: 600; font-size: 15px; color: var(--rose); letter-spacing: 0.5px; }
-    .nav-cta { background: var(--rose); color: var(--white); border: none; padding: 9px 20px; border-radius: 30px; font-size: 14px; font-family: 'Inter', sans-serif; cursor: pointer; text-decoration: none; font-weight: 500; transition: background 0.2s; }
-    .nav-cta:hover { background: #a8688a; }
+    nav { position: sticky; top: 0; z-index: 50; background: rgba(251,247,240,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--linea); }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+    nav img { height: 34px; width: auto; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--ciruela); color: var(--crema); text-decoration: none; font-weight: 700; padding: 15px 26px; border-radius: 40px; font-size: 16px; transition: transform .15s, background .15s; }
+    .btn:hover { background: #2c1f3a; transform: translateY(-1px); }
+    .btn.sm { padding: 10px 18px; font-size: 14px; }
+    .btn.lila { background: var(--lila); color: var(--ciruela); }
+    .btn.lila:hover { background: #bba5da; }
+    .link { color: var(--ciruela); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--lila); padding-bottom: 2px; }
 
     /* HERO */
-    .hero { background: linear-gradient(135deg, var(--rose-light) 0%, #fdf6fa 60%, var(--white) 100%); padding: 80px 32px 60px; text-align: center; }
-    .badge { display: inline-block; background: var(--rose-mid); color: var(--rose); font-size: 12px; font-weight: 500; padding: 5px 16px; border-radius: 30px; margin-bottom: 24px; letter-spacing: 0.5px; }
-    .hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 600; color: var(--dark); max-width: 640px; margin: 0 auto 16px; line-height: 1.2; }
-    .hero h1 span { color: var(--rose); }
-    .hero p { font-size: 17px; color: var(--muted); max-width: 480px; margin: 0 auto 36px; }
-    .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { background: var(--rose); color: var(--white); border: none; padding: 13px 28px; border-radius: 30px; font-size: 15px; font-family: 'Inter', sans-serif; cursor: pointer; font-weight: 500; text-decoration: none; transition: background 0.2s; }
-    .btn-primary:hover { background: #a8688a; }
-    .btn-outline { background: transparent; color: var(--rose); border: 1.5px solid var(--rose); padding: 13px 28px; border-radius: 30px; font-size: 15px; font-family: 'Inter', sans-serif; cursor: pointer; font-weight: 500; text-decoration: none; transition: all 0.2s; }
-    .btn-outline:hover { background: var(--rose-light); }
-
-    /* STATS */
-    .stats { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rose-mid); border-bottom: 1px solid var(--rose-mid); }
-    .stat { padding: 32px 20px; text-align: center; border-right: 1px solid var(--rose-mid); }
-    .stat:last-child { border-right: none; }
-    .stat-num { font-size: 30px; font-weight: 600; color: var(--rose); }
-    .stat-label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    .hero { padding: 64px 0 56px; background: linear-gradient(180deg, var(--beige), var(--crema)); }
+    .hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
+    .hero h1 { font-size: clamp(36px, 6vw, 62px); }
+    .hero p.sub { margin-top: 20px; font-size: 19px; max-width: 540px; }
+    .hero .ctas { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; margin-top: 30px; }
+    .hero .nota { margin-top: 14px; font-size: 14px; color: var(--lila-profundo); }
+    .bienvenida { display: none; background: var(--lila-suave); border-radius: 14px; padding: 12px 16px; font-size: 15px; margin-bottom: 18px; max-width: 540px; }
+    .caso { background: var(--ciruela); color: var(--crema); border-radius: 28px; padding: 36px; position: relative; overflow: hidden; }
+    .caso .k { font-size: 12px; letter-spacing: 3px; font-weight: 700; color: var(--lila); }
+    .caso .num { font-family: 'Fraunces', serif; font-size: 96px; line-height: 1; color: var(--lila); margin: 14px 0 6px; }
+    .caso h3 { color: var(--crema); font-size: 26px; }
+    .caso p { margin-top: 12px; color: #D9CDE8; font-size: 15px; }
+    .caso .barras { display: flex; align-items: flex-end; gap: 14px; margin-top: 24px; height: 110px; }
+    .caso .barras div { flex: 1; border-radius: 10px 10px 4px 4px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 8px; font-size: 13px; font-weight: 700; }
+    .caso .b1 { height: 23%; background: #6B5785; color: var(--crema); }
+    .caso .b2 { height: 100%; background: var(--lila); color: var(--ciruela); }
+    .caso .leyenda { display: flex; gap: 14px; margin-top: 8px; font-size: 13px; color: #CBBDDD; }
+    .caso .leyenda span { flex: 1; text-align: center; }
 
     /* SECTIONS */
-    section { padding: 64px 32px; max-width: 760px; margin: 0 auto; }
-    .section-tag { font-size: 12px; font-weight: 600; color: var(--rose); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; }
-    section h2 { font-size: clamp(22px, 3.5vw, 32px); font-weight: 600; color: var(--dark); margin-bottom: 12px; line-height: 1.25; }
-    section > p { font-size: 16px; color: var(--muted); margin-bottom: 36px; }
+    section { padding: 80px 0; }
+    .head { max-width: 680px; margin-bottom: 40px; }
+    .head h2 { font-size: clamp(30px, 4.4vw, 44px); }
+    .head p { margin-top: 14px; font-size: 18px; }
+    .center { text-align: center; margin-left: auto; margin-right: auto; }
 
-    /* SERVICES */
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
-    .service-card { background: var(--rose-light); border: 1px solid var(--rose-mid); border-radius: var(--radius); padding: 22px 18px; transition: transform 0.2s; }
-    .service-card:hover { transform: translateY(-3px); }
-    .service-icon { width: 36px; height: 36px; margin-bottom: 12px; object-fit: contain; }
-    .service-icon-svg { width: 36px; height: 36px; margin-bottom: 12px; display: block; }
-    .service-card h3 { font-size: 15px; font-weight: 600; color: var(--dark); margin-bottom: 6px; }
-    .service-card p { font-size: 13px; color: var(--muted); line-height: 1.55; }
+    /* SEÑALES */
+    .senales { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .senal { background: var(--beige); border-radius: var(--radio); padding: 28px; }
+    .senal .n { font-family: 'Fraunces', serif; font-size: 34px; color: var(--lila-profundo); }
+    .senal p { margin-top: 6px; font-size: 18px; color: var(--ciruela); }
+    .remate { margin-top: 28px; font-size: 20px; color: var(--ciruela); font-family: 'Fraunces', serif; }
 
-    /* PROCESS */
-    .steps { display: flex; flex-direction: column; gap: 0; }
-    .step { display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--rose-mid); align-items: flex-start; }
-    .step:last-child { border-bottom: none; }
-    .step-num { min-width: 36px; height: 36px; border-radius: 50%; background: var(--rose); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; margin-top: 2px; }
-    .step h3 { font-size: 15px; font-weight: 600; color: var(--dark); margin-bottom: 4px; }
-    .step p { font-size: 14px; color: var(--muted); line-height: 1.6; }
-
-    /* RUBROS */
-    .rubros { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-    .rubro { background: var(--rose-light); border: 1px solid var(--rose-mid); border-radius: 30px; padding: 7px 16px; font-size: 13px; color: var(--muted); }
-
-    /* DIVIDER */
-    .divider { border: none; border-top: 1px solid var(--rose-mid); margin: 0; }
+    /* SERVICIOS */
+    .bg-lila { background: var(--lila-suave); }
+    .servicios { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .serv { background: var(--crema); border-radius: var(--radio); padding: 30px; border: 1px solid #DCCFEA; }
+    .serv .ic { width: 52px; height: 52px; border-radius: 50%; background: var(--lila); display: grid; place-items: center; margin-bottom: 18px; }
+    .serv .ic svg { width: 26px; height: 26px; }
+    .serv h3 { font-size: 24px; }
+    .serv p { margin-top: 8px; }
+    .serv ul { margin-top: 12px; list-style: none; }
+    .serv li { padding: 4px 0 4px 22px; position: relative; font-size: 16px; }
+    .serv li::before { content: ""; position: absolute; left: 0; top: 13px; width: 8px; height: 8px; border-radius: 50%; background: var(--lila-profundo); }
+    .serv.destacado { background: var(--ciruela); color: #E5DAF1; border: none; }
+    .serv.destacado h3 { color: var(--crema); }
+    .serv.destacado .ic { background: var(--lila); }
+    .serv.destacado li::before { background: var(--lila); }
 
     /* RESULTADOS */
-    .resultados-wrap { background: var(--dark); padding: 64px 32px; }
-    .resultados-inner { max-width: 760px; margin: 0 auto; }
-    .resultados-wrap .section-tag { color: var(--rose-mid); }
-    .resultados-wrap h2 { color: var(--white); font-size: clamp(22px, 3.5vw, 32px); font-weight: 600; margin-bottom: 12px; }
-    .resultados-wrap > .resultados-inner > p { color: #b89aaa; font-size: 16px; margin-bottom: 36px; }
-    .resultados-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-    .resultado-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 24px 20px; }
-    .resultado-numero { font-size: 28px; font-weight: 700; color: var(--rose); margin-bottom: 4px; }
-    .resultado-label { font-size: 13px; color: #b89aaa; line-height: 1.5; }
-    .resultado-plataforma { font-size: 11px; color: #7a6272; margin-top: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 26px; }
+    .stat { text-align: center; padding: 26px 12px; border-radius: var(--radio); background: var(--beige); }
+    .stat b { display: block; font-family: 'Fraunces', serif; font-weight: 500; font-size: 40px; color: var(--ciruela); line-height: 1.1; }
+    .stat span { font-size: 15px; }
+    .resultados { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .res { border: 1px solid var(--linea); border-radius: var(--radio); padding: 26px; background: #fff; }
+    .res .big { font-family: 'Fraunces', serif; font-size: 38px; color: var(--lila-profundo); line-height: 1.1; }
+    .res p { margin-top: 8px; font-size: 15px; color: var(--ciruela); }
+    .res small { display: block; margin-top: 12px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #9A8AAE; font-weight: 700; }
 
     /* TESTIMONIOS */
-    .testimonios-wrap { padding: 64px 32px; background: var(--rose-light); }
-    .testimonios-inner { max-width: 760px; margin: 0 auto; }
-    .testimonios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 32px; }
-    .testimonio-card { background: var(--white); border: 1px solid var(--rose-mid); border-radius: var(--radius); padding: 24px 20px; }
-    .testimonio-texto { font-size: 14px; color: var(--text); line-height: 1.65; font-style: italic; margin-bottom: 16px; }
-    .testimonio-nombre { font-size: 13px; font-weight: 600; color: var(--rose); }
-    .testimonio-detalle { font-size: 12px; color: var(--muted); margin-top: 2px; }
-    .comilla { font-size: 36px; color: var(--rose-mid); line-height: 1; margin-bottom: 8px; font-family: Georgia, serif; }
+    .bg-beige { background: var(--beige); }
+    .testis { columns: 3; column-gap: 18px; }
+    .testi { break-inside: avoid; background: var(--crema); border-radius: var(--radio); padding: 26px; margin-bottom: 18px; }
+    .testi q { display: block; font-family: 'Fraunces', serif; font-size: 19px; color: var(--ciruela); line-height: 1.4; quotes: "“" "”"; }
+    .testi span { display: block; margin-top: 14px; font-size: 14px; font-weight: 700; color: var(--lila-profundo); }
 
-    /* CONTACT */
-    .contact-wrap { padding: 64px 32px; background: var(--white); }
-    .contact-box { background: var(--rose-light); border: 1px solid var(--rose-mid); border-radius: 20px; padding: 48px 32px; text-align: center; max-width: 560px; margin: 0 auto; }
-    .contact-box h2 { font-size: 26px; font-weight: 600; color: var(--dark); margin-bottom: 10px; }
-    .contact-box p { font-size: 15px; color: var(--muted); margin-bottom: 28px; line-height: 1.6; }
+    /* PASOS */
+    .pasos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: p; }
+    .paso { counter-increment: p; padding-top: 18px; border-top: 2px solid var(--lila); }
+    .paso::before { content: counter(p); font-family: 'Fraunces', serif; font-size: 44px; color: var(--lila-profundo); line-height: 1; }
+    .paso h3 { font-size: 21px; margin-top: 10px; }
+    .paso p { margin-top: 6px; font-size: 16px; }
 
-    /* FOOTER */
-    footer { padding: 24px 32px; text-align: center; border-top: 1px solid var(--rose-mid); }
-    footer p { font-size: 13px; color: var(--muted); }
-    footer a { color: var(--rose); text-decoration: none; }
+    /* RUBROS */
+    .rubros { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .rubro { border-radius: var(--radio); padding: 30px; background: var(--crema); }
+    .rubro:nth-child(2) { background: var(--beige); }
+    .rubro h3 { font-size: 26px; }
+    .rubro p { margin-top: 8px; }
+    .tambien { margin-top: 22px; font-size: 15px; }
 
-    /* MOBILE */
-    @media (max-width: 600px) {
-      nav { padding: 14px 20px; }
-      .hero { padding: 60px 20px 48px; }
-      .stats { grid-template-columns: repeat(3, 1fr); }
-      .stat { padding: 20px 10px; }
-      .stat-num { font-size: 22px; }
-      section { padding: 48px 20px; }
-      .resultados-wrap { padding: 48px 20px; }
-      .testimonios-wrap { padding: 48px 20px; }
-      .contact-wrap { padding: 48px 20px; }
-      .contact-box { padding: 36px 20px; }
+    /* FAQ */
+    .faq { max-width: 760px; }
+    details { border-bottom: 1px solid var(--linea); padding: 20px 0; }
+    summary { cursor: pointer; list-style: none; font-family: 'Fraunces', serif; font-size: 21px; color: var(--ciruela); display: flex; justify-content: space-between; gap: 20px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--lila-profundo); font-family: 'DM Sans'; font-size: 26px; line-height: 1; }
+    details[open] summary::after { content: "–"; }
+    details p { margin-top: 12px; }
+
+    /* CTA FINAL */
+    .final { background: var(--ciruela); color: #E5DAF1; text-align: center; border-radius: 34px; padding: 64px 28px; }
+    .final h2 { color: var(--crema); font-size: clamp(30px, 4.6vw, 46px); }
+    .final h2 i { color: var(--lila); }
+    .final p { margin: 16px auto 30px; max-width: 560px; font-size: 18px; }
+    .final .incluye { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+    .final .incluye span { border: 1px solid #6B5785; border-radius: 30px; padding: 8px 16px; font-size: 15px; }
+
+    footer { padding: 40px 0 110px; text-align: center; font-size: 15px; }
+    footer img { height: 40px; width: auto; margin: 0 auto 14px; }
+    footer a { text-decoration: none; border-bottom: 1px solid var(--lila); }
+
+    /* WhatsApp flotante (mobile) */
+    .flotante { display: none; position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 60; justify-content: center; box-shadow: 0 10px 30px rgba(61,43,79,.3); }
+
+    @media (max-width: 860px) {
+      .hero .wrap, .servicios, .resultados, .rubros { grid-template-columns: 1fr; }
+      .senales, .pasos { grid-template-columns: 1fr 1fr; }
+      .testis { columns: 1; }
+      .stats { grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+      .stat b { font-size: 30px; }
+      .stat span { font-size: 13px; }
+      section { padding: 60px 0; }
+      .hero { padding: 40px 0 48px; }
+      nav .btn { display: none; }
+      .flotante { display: flex; }
+    }
+    @media (max-width: 520px) {
+      .senales, .pasos { grid-template-columns: 1fr; }
+      .caso .num { font-size: 76px; }
+      body { font-size: 16px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <span class="nav-logo">faw.marketing</span>
-    <a class="nav-cta" href="https://wa.me/+5493483463130" target="_blank">Hablemos 💬</a>
-  </nav>
+<nav>
+  <div class="wrap">
+    <a href="#"><img src="assets/flora-palabra-lila.png" alt="Flora Marketing" /></a>
+    <a class="btn sm js-wa" href="https://wa.me/5493483463130">Pedí tu diagnóstico</a>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="badge">faw.marketing</div>
-    <h1>Más ventas con <span>publicidad digital</span> que realmente funciona</h1>
-    <p>Gestiono tus campañas en Meta, TikTok, Pinterest y más para que te enfoques en lo que hacés bien: tu negocio.</p>
-    <div class="cta-row">
-      <a class="btn-primary" href="https://wa.me/+5493483463130" target="_blank">Hablemos 💬</a>
-      <a class="btn-outline" href="#servicios">Ver servicios</a>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="bienvenida" id="bienvenida">👋 ¡Hola! Te dejé un folleto en tu local. Acá te cuento todo lo que puedo hacer por tu negocio.</div>
+      <span class="tag">Para negocios con trayectoria</span>
+      <h1>Tu local ya funciona. <i>Hagamos que venda en todo el país.</i></h1>
+      <p class="sub">Soy Flor y ayudo a negocios físicos con años en su rubro a vender también online: tienda, publicidad y contenido, con un plan claro y números que se miden.</p>
+      <div class="ctas">
+        <a class="btn js-wa" href="https://wa.me/5493483463130">Quiero mi diagnóstico 💬</a>
+        <a class="link" href="#servicios">Ver servicios</a>
+      </div>
+      <p class="nota">Te respondo personalmente por WhatsApp.</p>
+    </div>
+    <div class="caso">
+      <span class="k">CASO REAL · LOCAL DE DEPORTES</span>
+      <div class="num">x4</div>
+      <h3>De 3.000 a 13.000 USD de facturación en un mes.</h3>
+      <p>Un local con buen producto y clientes fieles, al que le faltaba la parte online. Ordenamos la oferta, optimicé la tienda y lanzamos anuncios con videos grabados en el mismo local.</p>
+      <div class="barras"><div class="b1">3.000</div><div class="b2">13.000</div></div>
+      <div class="leyenda"><span>Antes</span><span>Un mes después</span></div>
     </div>
   </div>
+</header>
 
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat">
-      <div class="stat-num">+2 años</div>
-      <div class="stat-label">De experiencia en paid media</div>
+<section>
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">¿Te pasa esto?</span>
+      <h2>Tu negocio es conocido en tu ciudad, <i>pero online no despega.</i></h2>
     </div>
-    <div class="stat">
-      <div class="stat-num">30+</div>
-      <div class="stat-label">Clientes gestionados</div>
+    <div class="senales">
+      <div class="senal"><div class="n">01</div><p>Te escriben de otras ciudades preguntando si hacés envíos.</p></div>
+      <div class="senal"><div class="n">02</div><p>Te queda stock de temporada que no rota en tu zona.</p></div>
+      <div class="senal"><div class="n">03</div><p>Tenés Instagram o tienda online, pero casi no te vende.</p></div>
     </div>
-    <div class="stat">
-      <div class="stat-num">5</div>
-      <div class="stat-label">Plataformas y servicios</div>
-    </div>
+    <p class="remate">No es un problema de producto. Es que a tu negocio le falta un sistema para vender online.</p>
   </div>
+</section>
 
-  <!-- SERVICIOS -->
-  <hr class="divider" />
-  <section id="servicios">
-    <div class="section-tag">Servicios</div>
-    <h2>Todo lo que necesitás para vender más</h2>
-    <p>Desde la estrategia hasta la ejecución, me encargo de que tu inversión en publicidad genere resultados reales.</p>
-    <div class="services-grid">
-
-      <div class="service-card">
-        <!-- Meta logo -->
-        <svg class="service-icon-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 2C9.163 2 2 9.163 2 18s7.163 16 16 16 16-7.163 16-16S26.837 2 18 2z" fill="#1877F2"/>
-          <path d="M22.5 13.5c-1.2 0-2.1.6-2.8 1.5L18 17.4l-1.7-2.4c-.7-.9-1.6-1.5-2.8-1.5-2 0-3.5 1.7-3.5 4 0 2.8 2.5 6.1 7 9 4.5-2.9 7-6.2 7-9 0-2.3-1.5-4-3.5-4z" fill="white"/>
-        </svg>
-        <h3>Meta Ads</h3>
-        <p>Facebook e Instagram. Campañas de ventas, tráfico y reconocimiento de marca.</p>
+<section class="bg-lila" id="servicios">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Servicios</span>
+      <h2>Todo lo que tu negocio necesita para <i>vender online.</i></h2>
+      <p>Trabajo codo a codo con el dueño. Vos seguís haciendo lo que sabés hacer; de lo online me encargo yo.</p>
+    </div>
+    <div class="servicios">
+      <div class="serv destacado">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3D2B4F" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div>
+        <h3>Diagnóstico y consultoría</h3>
+        <p>El primer paso. Reviso tu negocio por dentro y te llevás un plan de acción concreto.</p>
+        <ul><li>Revisión de tu Instagram, tienda, oferta y números</li><li>Reunión de 60 a 90 minutos, presencial u online</li><li>Plan escrito con las acciones priorizadas</li></ul>
       </div>
-
-      <div class="service-card">
-        <!-- TikTok logo -->
-        <svg class="service-icon-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="36" height="36" rx="8" fill="#010101"/>
-          <path d="M25.5 9.5c0 0-1 4-5 4v3.5c1.2 0 3-.4 5-1.5V24c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6v-4c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10V9.5h-4z" fill="white"/>
-          <path d="M25.5 9.5c0 0-1 4-5 4v3.5c1.2 0 3-.4 5-1.5" fill="#69C9D0"/>
-        </svg>
-        <h3>TikTok Ads</h3>
-        <p>Llegá a nuevas audiencias con creatividades que conectan y convierten.</p>
-      </div>
-
-      <div class="service-card">
-        <!-- Pinterest logo -->
-        <svg class="service-icon-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="18" cy="18" r="16" fill="#E60023"/>
-          <path d="M18 6C11.4 6 6 11.4 6 18c0 5.1 3.1 9.5 7.6 11.4-.1-.9-.2-2.3.1-3.3.2-.9 1.5-6.3 1.5-6.3s-.4-.8-.4-1.9c0-1.8 1.1-3.1 2.4-3.1 1.1 0 1.7.8 1.7 1.8 0 1.1-.7 2.7-1.1 4.2-.3 1.3.6 2.3 1.9 2.3 2.3 0 3.8-2.9 3.8-6.4 0-2.6-1.8-4.5-4.9-4.5-3.5 0-5.7 2.6-5.7 5.5 0 1 .3 1.7.7 2.2.2.2.2.3.1.6-.1.3-.3 1-.3 1.3-.1.4-.3.5-.7.3-1.7-.7-2.5-2.7-2.5-4.9 0-3.6 3-7.9 8.9-7.9 4.7 0 7.8 3.4 7.8 7.1 0 4.8-2.7 8.4-6.6 8.4-1.3 0-2.6-.7-3-1.5l-.8 3.1c-.3 1.1-1 2.3-1.5 3.1.9.3 1.8.4 2.8.4 6.6 0 12-5.4 12-12S24.6 6 18 6z" fill="white"/>
-        </svg>
-        <h3>Pinterest Ads</h3>
-        <p>Ideal para moda, decoración y productos visuales con intención de compra.</p>
-      </div>
-
-      <div class="service-card">
-        <!-- Landing page icon -->
-        <svg class="service-icon-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="36" height="36" rx="8" fill="#c084a0"/>
-          <rect x="6" y="8" width="24" height="20" rx="2" fill="white" opacity="0.2"/>
-          <rect x="6" y="8" width="24" height="5" rx="2" fill="white" opacity="0.5"/>
-          <rect x="9" y="17" width="10" height="2" rx="1" fill="white"/>
-          <rect x="9" y="21" width="7" height="2" rx="1" fill="white"/>
-          <rect x="21" y="16" width="6" height="8" rx="2" fill="white" opacity="0.7"/>
-        </svg>
-        <h3>Landing pages</h3>
-        <p>Páginas optimizadas para convertir visitas en clientes reales.</p>
-      </div>
-
-      <div class="service-card">
-        <!-- Tienda Nube icon -->
-        <svg class="service-icon-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="36" height="36" rx="8" fill="#2CBBF0"/>
-          <path d="M26 16.5c0-3.6-2.9-6.5-6.5-6.5-2.9 0-5.4 1.9-6.2 4.6C11.1 14.9 9 17.2 9 20c0 3 2.5 5.5 5.5 5.5h11c2.5 0 4.5-2 4.5-4.5 0-2.2-1.6-4-3.8-4.4L26 16.5z" fill="white"/>
-        </svg>
+      <div class="serv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3D2B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.5 11h11L21 7H7"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg></div>
         <h3>Tienda Nube</h3>
-        <p>Configuración completa: pagos, envíos y categorías.</p>
+        <p>Tu tienda online lista para vender y cobrar las 24 horas.</p>
+        <ul><li>Creación desde cero u optimización de tu tienda</li><li>Catálogo, talles, medidas y categorías ordenadas</li><li>Medios de pago y envíos a todo el país</li></ul>
       </div>
-
-      <div class="service-card">
-        <!-- UGC icon -->
-        <svg class="service-icon-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="36" height="36" rx="8" fill="#c084a0"/>
-          <circle cx="18" cy="14" r="5" fill="white" opacity="0.9"/>
-          <path d="M8 28c0-4.4 4.5-8 10-8s10 3.6 10 8" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="26" cy="12" r="4" fill="#f5eef3"/>
-          <path d="M26 10v4M24 12h4" stroke="#c084a0" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        <h3>Creadora UGC</h3>
-        <p>Contenido auténtico generado por usuario para marcas que quieren conectar de verdad.</p>
+      <div class="serv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3D2B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div>
+        <h3>Publicidad</h3>
+        <p>Anuncios que llevan clientes a tu tienda, a tu WhatsApp y a tu local.</p>
+        <ul><li>Meta Ads (Instagram y Facebook)</li><li>TikTok Ads y Pinterest Ads</li><li>Reporte mensual con ventas, inversión y resultados</li></ul>
       </div>
-
-      <div class="service-card">
-        <!-- Video editing icon -->
-        <svg class="service-icon-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="36" height="36" rx="8" fill="#2a1f27"/>
-          <rect x="6" y="10" width="18" height="14" rx="2" fill="white" opacity="0.15"/>
-          <rect x="6" y="10" width="18" height="14" rx="2" stroke="white" stroke-width="1.5"/>
-          <path d="M24 15l6-3v12l-6-3v-6z" fill="white" opacity="0.8"/>
-          <path d="M11 18l4-2.5v5L11 18z" fill="white"/>
-        </svg>
-        <h3>Edición de video</h3>
-        <p>Edición profesional de reels, stories y contenido para redes sociales y ads.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- RESULTADOS -->
-  <div class="resultados-wrap" id="resultados">
-    <div class="resultados-inner">
-      <div class="section-tag">Resultados reales</div>
-      <h2>Números que hablan por sí solos</h2>
-      <p style="color:#b89aaa;font-size:16px;margin-bottom:36px;">Estos son algunos resultados de campañas gestionadas para clientes reales.</p>
-      <div class="resultados-grid">
-        <div class="resultado-card">
-          <div class="resultado-numero">ROAS 22.47</div>
-          <div class="resultado-label">183 compras · $12.604.270 en ventas · $817.774 invertidos</div>
-          <div class="resultado-plataforma">Meta Ads</div>
-        </div>
-        <div class="resultado-card">
-          <div class="resultado-numero">ROAS 14.31</div>
-          <div class="resultado-label">260 compras · $18.345.862 en ventas · $1.281.854 invertidos</div>
-          <div class="resultado-plataforma">Meta Ads</div>
-        </div>
-        <div class="resultado-card">
-          <div class="resultado-numero">ROAS 31.08</div>
-          <div class="resultado-label">$2.194.525 facturados · $70.000 de inversión</div>
-          <div class="resultado-plataforma">Meta Ads</div>
-        </div>
-        <div class="resultado-card">
-          <div class="resultado-numero">ROAS 18.92</div>
-          <div class="resultado-label">20 ventas · $2.000.000 facturados · $105.000 invertidos</div>
-          <div class="resultado-plataforma">Meta Ads</div>
-        </div>
-        <div class="resultado-card">
-          <div class="resultado-numero">+77.57%</div>
-          <div class="resultado-label">Aumento en valor de conversión mes a mes · $5.148.778 en ventas</div>
-          <div class="resultado-plataforma">Meta Ads · Agosto 2026</div>
-        </div>
-        <div class="resultado-card">
-          <div class="resultado-numero">1517 ventas</div>
-          <div class="resultado-label">U$S 152.805 en ventas · ROAS promedio 14.68 · U$S 10.410 invertidos</div>
-          <div class="resultado-plataforma">Meta Ads</div>
-        </div>
-        <div class="resultado-card">
-          <div class="resultado-numero">+26.22%</div>
-          <div class="resultado-label">Aumento de compras mes a mes · 207 ventas totales</div>
-          <div class="resultado-plataforma">Meta Ads · Agosto 2026</div>
-        </div>
-        <div class="resultado-card">
-          <div class="resultado-numero">+1028%</div>
-          <div class="resultado-label">Crecimiento en valor de conversión en un cliente · de $183.555 a $2.071.481</div>
-          <div class="resultado-plataforma">Meta Ads · Agosto 2026</div>
-        </div>
+      <div class="serv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3D2B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg></div>
+        <h3>Contenido</h3>
+        <p>Contenido pensado para vender, no solo para verse lindo.</p>
+        <ul><li>Planner de contenido para redes y publicidad</li><li>Grabación en tu local (La Plata y CABA)</li><li>Edición de reels y videos para anuncios</li></ul>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- TESTIMONIOS -->
-  <div class="testimonios-wrap" id="testimonios">
-    <div class="testimonios-inner">
-      <div class="section-tag">Testimonios</div>
-      <h2>Lo que dicen mis clientes</h2>
-      <div class="testimonios-grid">
-        <div class="testimonio-card">
-          <div class="comilla">"</div>
-          <div class="testimonio-texto">La verdad una genialidad lo que hiciste y lograste. Desde el lunes a hoy ingresaron 11 ventas. ¡Sos una capa!</div>
-          <div class="testimonio-nombre">Cliente de moda</div>
-          <div class="testimonio-detalle">Meta Ads</div>
-        </div>
-        <div class="testimonio-card">
-          <div class="comilla">"</div>
-          <div class="testimonio-texto">Cuadruplicamos las ventas en un mes, invirtiendo lo mismo que el mes anterior y sin tanto contenido nuevo. Flor, real que SOS la uno.</div>
-          <div class="testimonio-nombre">Cliente ecommerce</div>
-          <div class="testimonio-detalle">Meta Ads</div>
-        </div>
-        <div class="testimonio-card">
-          <div class="comilla">"</div>
-          <div class="testimonio-texto">Desde hace meses que no me cae una venta de estos productos porque los anuncios no los lograba hacer funcionar... ¡Arrancamos bien! 🤍</div>
-          <div class="testimonio-nombre">Javo</div>
-          <div class="testimonio-detalle">Meta Ads</div>
-        </div>
-        <div class="testimonio-card">
-          <div class="comilla">"</div>
-          <div class="testimonio-texto">Se está vendiendo re bien en la página. Hola Flor, hoy fue una cosa increíble. ¡Bah, viene siendo!</div>
-          <div class="testimonio-nombre">Cliente tienda online</div>
-          <div class="testimonio-detalle">Meta Ads</div>
-        </div>
-        <div class="testimonio-card">
-          <div class="comilla">"</div>
-          <div class="testimonio-texto">Tremenda la web este finde y la del pasado. Fue lejos la mejor semana de todas.</div>
-          <div class="testimonio-nombre">Cliente ecommerce</div>
-          <div class="testimonio-detalle">Meta Ads</div>
-        </div>
-        <div class="testimonio-card">
-          <div class="comilla">"</div>
-          <div class="testimonio-texto">Ayer y hoy se movió un montón. Muy buen comienzo de mes. ¡Eso les íbamos a decir!</div>
-          <div class="testimonio-nombre">Lola Collado</div>
-          <div class="testimonio-detalle">Meta Ads</div>
-        </div>
-        <div class="testimonio-card">
-          <div class="comilla">"</div>
-          <div class="testimonio-texto">En cantidad de ventas aumentamos un 24%. ¡Locuraaaa! Siii viene re bien.</div>
-          <div class="testimonio-nombre">Julieta</div>
-          <div class="testimonio-detalle">Meta Ads</div>
-        </div>
-      </div>
+<section>
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Resultados</span>
+      <h2>Números <i>de clientes reales.</i></h2>
+      <p>Algunos resultados de campañas que gestioné.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>+2 años</b><span>en publicidad digital</span></div>
+      <div class="stat"><b>30+</b><span>clientes gestionados</span></div>
+      <div class="stat"><b>x4</b><span>caso de facturación en un mes</span></div>
+    </div>
+    <div class="resultados">
+      <div class="res"><div class="big">1.517 ventas</div><p>U$S 152.805 en ventas con U$S 10.410 invertidos · ROAS promedio 14,68</p><small>Meta Ads</small></div>
+      <div class="res"><div class="big">+1.028%</div><p>Crecimiento en valor de conversión: de $183.555 a $2.071.481</p><small>Meta Ads · Agosto 2026</small></div>
+      <div class="res"><div class="big">ROAS 22,47</div><p>183 compras · $12.604.270 en ventas con $817.774 invertidos</p><small>Meta Ads</small></div>
+      <div class="res"><div class="big">ROAS 14,31</div><p>260 compras · $18.345.862 en ventas con $1.281.854 invertidos</p><small>Meta Ads</small></div>
+      <div class="res"><div class="big">+77,57%</div><p>Aumento del valor de conversión mes a mes · $5.148.778 en ventas</p><small>Meta Ads · Agosto 2026</small></div>
+      <div class="res"><div class="big">ROAS 31,08</div><p>$2.194.525 facturados con $70.000 de inversión</p><small>Meta Ads</small></div>
     </div>
   </div>
+</section>
 
-  <!-- CÓMO TRABAJO -->
-  <hr class="divider" />
-  <section id="como-trabajo">
-    <div class="section-tag">Cómo trabajo</div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div>
-          <h3>Diagnóstico gratuito</h3>
-          <p>Analizamos juntos tu negocio, tu objetivo y qué estás haciendo hoy en publicidad.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div>
-          <h3>Propuesta a medida</h3>
-          <p>Te armo una estrategia pensada para tu rubro, tu presupuesto y tus metas.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div>
-          <h3>Gestión y optimización</h3>
-          <p>Me encargo de las campañas día a día.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div>
-          <h3>Resultados medibles</h3>
-          <p>Todo se mide. Ventas, leads, ROAS, costo por resultado.</p>
-        </div>
-      </div>
+<section class="bg-beige">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Testimonios</span>
+      <h2>Lo que dicen <i>mis clientes.</i></h2>
     </div>
-  </section>
+    <div class="testis">
+      <div class="testi"><q>Cuadruplicamos las ventas en un mes, invirtiendo lo mismo que el mes anterior y sin tanto contenido nuevo. Flor, real que SOS la uno.</q><span>Cliente ecommerce</span></div>
+      <div class="testi"><q>La verdad una genialidad lo que hiciste y lograste. Desde el lunes a hoy ingresaron 11 ventas. ¡Sos una capa!</q><span>Cliente de moda</span></div>
+      <div class="testi"><q>Desde hace meses que no me cae una venta de estos productos porque los anuncios no los lograba hacer funcionar... ¡Arrancamos bien! 🤍</q><span>Javo</span></div>
+      <div class="testi"><q>Tremenda la web este finde y la del pasado. Fue lejos la mejor semana de todas.</q><span>Cliente ecommerce</span></div>
+      <div class="testi"><q>En cantidad de ventas aumentamos un 24%. ¡Locuraaaa! Siii viene re bien.</q><span>Julieta</span></div>
+      <div class="testi"><q>Se está vendiendo re bien en la página. Hoy fue una cosa increíble. ¡Bah, viene siendo!</q><span>Cliente tienda online</span></div>
+      <div class="testi"><q>Ayer y hoy se movió un montón. Muy buen comienzo de mes.</q><span>Lola Collado</span></div>
+    </div>
+  </div>
+</section>
 
-  <!-- RUBROS -->
-  <hr class="divider" />
-  <section id="rubros">
-    <div class="section-tag">Rubros</div>
-    <h2>Experiencia en distintos negocios</h2>
-    <p>Trabajé con clientes de diferentes industrias. Eso me permite entender rápido tu negocio y armar una estrategia que tiene sentido para vos.</p>
+<section>
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Cómo trabajo</span>
+      <h2>Un proceso simple, <i>con números claros.</i></h2>
+    </div>
+    <div class="pasos">
+      <div class="paso"><h3>Diagnóstico</h3><p>Conozco tu negocio, tus números y qué estás haciendo hoy online.</p></div>
+      <div class="paso"><h3>Plan a medida</h3><p>Armo una estrategia para tu rubro, tu presupuesto y tu objetivo de facturación.</p></div>
+      <div class="paso"><h3>Implementación</h3><p>Tienda, anuncios y contenido. Me encargo de todo el día a día.</p></div>
+      <div class="paso"><h3>Resultados</h3><p>Cada mes te muestro ventas, inversión y lo que vamos a mejorar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-lila">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Rubros</span>
+      <h2>Especializada en negocios <i>que venden producto.</i></h2>
+    </div>
     <div class="rubros">
-      <span class="rubro">Moda y ropa</span>
-      <span class="rubro">Calzado</span>
-      <span class="rubro">Lencería</span>
-      <span class="rubro">Beachwear</span>
-      <span class="rubro">Automotriz</span>
-      <span class="rubro">Logística</span>
-      <span class="rubro">Ecommerce</span>
-      <span class="rubro">Inmobiliarias</span>
+      <div class="rubro"><h3>Ropa y calzado</h3><p>Colecciones por temporada, talles bien cargados y stock que se vende en todo el país.</p></div>
+      <div class="rubro"><h3>Bazar y deco</h3><p>Catálogos grandes ordenados por ambiente y ocasión, y campañas para cada fecha de regalo.</p></div>
+      <div class="rubro"><h3>Mueblerías</h3><p>Catálogo con precios y financiación, y anuncios que traen consultas por WhatsApp de tu zona y del resto del país.</p></div>
     </div>
-  </section>
+    <p class="tambien">También trabajé con deportes, lencería, beachwear, automotriz, logística, inmobiliarias y ecommerce.</p>
+  </div>
+</section>
 
-  <!-- CONTACTO -->
-  <div class="contact-wrap" id="contacto">
-    <div class="contact-box">
-      <h2>¿Hablamos? 🌸</h2>
-      <p>Contame de tu negocio y te digo si puedo ayudarte.</p>
-      <a class="btn-primary" href="https://wa.me/+5493483463130" target="_blank">Escribime por WhatsApp</a>
+<section>
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Preguntas frecuentes</span>
+      <h2>Lo que más <i>me preguntan.</i></h2>
+    </div>
+    <div class="faq">
+      <details><summary>¿Necesito saber de redes o de internet?</summary><p>No. Vos me contás tu negocio y yo me encargo de la parte online. Te explico todo en palabras simples y te muestro los resultados cada mes.</p></details>
+      <details><summary>Ya probé con una agencia y no funcionó. ¿Qué cambia?</summary><p>Empiezo por tus números: margen, ticket promedio y cuánto podés invertir sin perder plata. Así cada peso en publicidad tiene un objetivo claro y se mide.</p></details>
+      <details><summary>¿Cuánto tengo que invertir en publicidad?</summary><p>Depende de tu rubro, tu margen y tu objetivo. En el diagnóstico calculamos juntos un monto inicial realista para tu negocio.</p></details>
+      <details><summary>¿Trabajás con negocios de otras provincias?</summary><p>Sí. Las grabaciones en el local las hago en La Plata y CABA, y la tienda, la publicidad y la estrategia las trabajo online con negocios de todo el país.</p></details>
+      <details><summary>¿En cuánto tiempo se ven resultados?</summary><p>El primer mes es de puesta en marcha y ajuste. Por eso trabajo con planes de al menos 3 meses, con reportes mensuales para que veas cómo avanza.</p></details>
     </div>
   </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>faw.marketing · <a href="https://instagram.com/faw.marketing" target="_blank">@faw.marketing</a> · Argentina</p>
-  </footer>
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="final">
+      <h2>Tu negocio ya tiene la trayectoria. <i>Sumemos todo el país.</i></h2>
+      <p>Escribime y coordinamos tu diagnóstico. Te digo con honestidad si puedo ayudarte y por dónde empezar.</p>
+      <div class="incluye"><span>Revisión de tu negocio</span><span>Reunión de 60-90 min</span><span>Plan de acción escrito</span></div>
+      <a class="btn lila js-wa" href="https://wa.me/5493483463130">Escribime por WhatsApp 💬</a>
+    </div>
+  </div>
+</section>
 
+<footer>
+  <img src="assets/flora-palabra-lila.png" alt="Flora Marketing" />
+  <p><a href="https://instagram.com/floramarketing.ar">@floramarketing.ar</a> · La Plata · CABA · Online a todo el país</p>
+</footer>
+
+<a class="btn flotante js-wa" href="https://wa.me/5493483463130">Pedí tu diagnóstico por WhatsApp 💬</a>
+
+<script>
+  // El QR del folleto apunta a esta página con ?origen=... (ej. ?origen=folleto-laplata)
+  // Así el mensaje de WhatsApp dice de dónde viene cada contacto.
+  (function () {
+    var origen = '';
+    try { origen = new URLSearchParams(location.search).get('origen') || ''; } catch (e) {}
+    var esFolleto = origen.indexOf('folleto') === 0;
+    var texto = esFolleto
+      ? 'Hola Flor! Recibí tu folleto en mi local y quiero saber más sobre el diagnóstico.'
+      : 'Hola Flor! Vi tu página y quiero saber más sobre el diagnóstico.';
+    if (origen) texto += ' (' + origen + ')';
+    var url = 'https://wa.me/5493483463130?text=' + encodeURIComponent(texto);
+    document.querySelectorAll('.js-wa').forEach(function (a) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; });
+    if (esFolleto) document.getElementById('bienvenida').style.display = 'block';
+  })();
+</script>
 </body>
 </html>
