@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<g transform="rotate(14 100 100)">
+<path fill="#000" fill-rule="evenodd" d="M100 16 a54 84 0 1 0 0.01 0 Z M103 21 a48.5 79 0 1 0 0.01 0 Z"/>
+</g>
+<text x="101" y="113" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-weight="500" font-size="36" letter-spacing="5" fill="#000">NA</text>
+</svg>
