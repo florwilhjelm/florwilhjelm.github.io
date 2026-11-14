@@ -11,7 +11,7 @@
   <meta name="theme-color" content="#F1E8DA" />
   <link rel="icon" href="assets/icono.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Playfair+Display:ital,wght@1,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -26,11 +26,12 @@
       --radio: 22px;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--crema); color: var(--texto); line-height: 1.6; font-size: 17px; }
+    body { font-family: 'Andika', sans-serif; background: var(--crema); color: var(--texto); line-height: 1.6; font-size: 17px; }
     img { max-width: 100%; display: block; }
     a { color: inherit; }
-    h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 500; color: var(--ciruela); line-height: 1.12; }
-    h1 i, h2 i { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; color: var(--lila-profundo); }
+    h1, h2, h3 { font-family: 'Andika', sans-serif; font-weight: 400; color: var(--ciruela); line-height: 1.15; text-transform: uppercase; letter-spacing: .5px; }
+    h1 i, h2 i { font-style: normal; color: var(--ciruela); padding: 0 6px; background: linear-gradient(transparent 32%, var(--lila) 32%, var(--lila) 94%, transparent 94%); border-radius: 10px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+    .final h2 i { color: var(--ciruela); }
     .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
     .tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--lila-profundo); margin-bottom: 14px; }
 
@@ -55,7 +56,7 @@
     .bienvenida { display: none; background: var(--lila-suave); border-radius: 14px; padding: 12px 16px; font-size: 15px; margin-bottom: 18px; max-width: 540px; }
     .caso { background: var(--ciruela); color: var(--crema); border-radius: 28px; padding: 36px; position: relative; overflow: hidden; }
     .caso .k { font-size: 12px; letter-spacing: 3px; font-weight: 700; color: var(--lila); }
-    .caso .num { font-family: 'Fraunces', serif; font-size: 96px; line-height: 1; color: var(--lila); margin: 14px 0 6px; }
+    .caso .num { font-family: 'Andika', sans-serif; font-size: 96px; line-height: 1; color: var(--lila); margin: 14px 0 6px; }
     .caso h3 { color: var(--crema); font-size: 26px; }
     .caso p { margin-top: 12px; color: #D9CDE8; font-size: 15px; }
     .caso .barras { display: flex; align-items: flex-end; gap: 14px; margin-top: 24px; height: 110px; }
@@ -75,9 +76,9 @@
     /* SEÑALES */
     .senales { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .senal { background: var(--beige); border-radius: var(--radio); padding: 28px; }
-    .senal .n { font-family: 'Fraunces', serif; font-size: 34px; color: var(--lila-profundo); }
+    .senal .n { font-family: 'Andika', sans-serif; font-size: 34px; color: var(--lila-profundo); }
     .senal p { margin-top: 6px; font-size: 18px; color: var(--ciruela); }
-    .remate { margin-top: 28px; font-size: 20px; color: var(--ciruela); font-family: 'Fraunces', serif; }
+    .remate { margin-top: 28px; font-size: 20px; color: var(--ciruela); font-family: 'Andika', sans-serif; }
 
     /* SERVICIOS */
     .bg-lila { background: var(--lila-suave); }
@@ -105,11 +106,11 @@
     /* RESULTADOS */
     .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 26px; }
     .stat { text-align: center; padding: 26px 12px; border-radius: var(--radio); background: var(--beige); }
-    .stat b { display: block; font-family: 'Fraunces', serif; font-weight: 500; font-size: 40px; color: var(--ciruela); line-height: 1.1; }
+    .stat b { display: block; font-family: 'Andika', sans-serif; font-weight: 500; font-size: 40px; color: var(--ciruela); line-height: 1.1; }
     .stat span { font-size: 15px; }
     .resultados { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .res { border: 1px solid var(--linea); border-radius: var(--radio); padding: 26px; background: #fff; }
-    .res .big { font-family: 'Fraunces', serif; font-size: 38px; color: var(--lila-profundo); line-height: 1.1; }
+    .res .big { font-family: 'Andika', sans-serif; font-size: 38px; color: var(--lila-profundo); line-height: 1.1; }
     .res p { margin-top: 8px; font-size: 15px; color: var(--ciruela); }
     .res small { display: block; margin-top: 12px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #9A8AAE; font-weight: 700; }
 
@@ -117,13 +118,13 @@
     .bg-beige { background: var(--beige); }
     .testis { columns: 3; column-gap: 18px; }
     .testi { break-inside: avoid; background: var(--crema); border-radius: var(--radio); padding: 26px; margin-bottom: 18px; }
-    .testi q { display: block; font-family: 'Fraunces', serif; font-size: 19px; color: var(--ciruela); line-height: 1.4; quotes: "“" "”"; }
+    .testi q { display: block; font-family: 'Andika', sans-serif; font-size: 19px; color: var(--ciruela); line-height: 1.4; quotes: "“" "”"; }
     .testi span { display: block; margin-top: 14px; font-size: 14px; font-weight: 700; color: var(--lila-profundo); }
 
     /* PASOS */
     .pasos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: p; }
     .paso { counter-increment: p; padding-top: 18px; border-top: 2px solid var(--lila); }
-    .paso::before { content: counter(p); font-family: 'Fraunces', serif; font-size: 44px; color: var(--lila-profundo); line-height: 1; }
+    .paso::before { content: counter(p); font-family: 'Andika', sans-serif; font-size: 44px; color: var(--lila-profundo); line-height: 1; }
     .paso h3 { font-size: 21px; margin-top: 10px; }
     .paso p { margin-top: 6px; font-size: 16px; }
 
@@ -138,9 +139,9 @@
     /* FAQ */
     .faq { max-width: 760px; }
     details { border-bottom: 1px solid var(--linea); padding: 20px 0; }
-    summary { cursor: pointer; list-style: none; font-family: 'Fraunces', serif; font-size: 21px; color: var(--ciruela); display: flex; justify-content: space-between; gap: 20px; }
+    summary { cursor: pointer; list-style: none; font-family: 'Andika', sans-serif; font-size: 21px; color: var(--ciruela); display: flex; justify-content: space-between; gap: 20px; }
     summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; color: var(--lila-profundo); font-family: 'DM Sans'; font-size: 26px; line-height: 1; }
+    summary::after { content: "+"; color: var(--lila-profundo); font-family: 'Andika'; font-size: 26px; line-height: 1; }
     details[open] summary::after { content: "–"; }
     details p { margin-top: 12px; }
 
@@ -203,10 +204,10 @@
     <div class="caso">
       <span class="k">CASO REAL · LOCAL DE DEPORTES</span>
       <div class="num">x4</div>
-      <h3>De 3.000 a 13.000 USD de facturación en un mes.</h3>
+      <h3>De 3.000 a 13.000 USD de facturación en 60 días.</h3>
       <p>Un local con buen producto y clientes fieles, al que le faltaba la parte online. Ordenamos la oferta, optimicé la tienda y lanzamos anuncios con videos grabados en el mismo local.</p>
       <div class="barras"><div class="b1">3.000</div><div class="b2">13.000</div></div>
-      <div class="leyenda"><span>Antes</span><span>Un mes después</span></div>
+      <div class="leyenda"><span>Antes</span><span>60 días después</span></div>
     </div>
   </div>
 </header>
@@ -278,7 +279,7 @@
     <div class="stats">
       <div class="stat"><b>+2 años</b><span>en publicidad digital</span></div>
       <div class="stat"><b>30+</b><span>clientes gestionados</span></div>
-      <div class="stat"><b>x4</b><span>caso de facturación en un mes</span></div>
+      <div class="stat"><b>x4</b><span>caso de facturación en 60 días</span></div>
     </div>
     <div class="resultados">
       <div class="res"><div class="big">1.517 ventas</div><p>U$S 152.805 en ventas con U$S 10.410 invertidos · ROAS promedio 14,68</p><small>Meta Ads</small></div>
