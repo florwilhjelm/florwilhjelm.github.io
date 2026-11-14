@@ -11,21 +11,21 @@ A_css=f'''*{{margin:0;padding:0;box-sizing:border-box}}body{{width:1080px;height
 .av{{margin-top:auto;width:520px;height:520px;border-radius:50% 50% 0 0;border:4px dashed {LI};display:grid;place-items:center;color:{L};font-size:34px}}
 .pill{{background:{SOFT};border-radius:34px;padding:28px 40px;font-size:52px;line-height:1.25}}
 .foot{{margin-top:22px;font-size:28px;color:{L};display:flex;gap:14px;align-items:center}}.foot img{{height:40px}}'''
-A1=f'''<div class="s"><div class="t1">Si hoy tuviera un local con 20 años en el rubro,</div>
-<div class="row">{spark_l}<div class="box">ASÍ LO HARÍA VENDER<br>EN TODO EL PAÍS</div>{spark_r}</div>
-<div class="t2">empezando <span class="hl">mañana mismo.</span>{rough_underline(300)}</div>
+A1=f'''<div class="s"><div class="t1">Tu local es conocido en tu ciudad hace años.</div>
+<div class="row">{spark_l}<div class="box">¿Y SI TU PRÓXIMO CLIENTE<br>ESTÁ EN OTRA PROVINCIA?</div>{spark_r}</div>
+<div class="t2">Te muestro cómo llegar a él <span class="hl">en 3 pasos.</span>{rough_underline(300)}</div>
 <div class="av">acá va tu avatar<br>(ilustrado, parecido a vos)</div>
 <div class="foot"><img src="flora-palabra-lila.png"> @floramarketing.ar</div></div>'''
 A2=f'''<div class="s" style="text-align:left;align-items:stretch">
-<div style="text-align:center"><div class="row" style="justify-content:center">{spark_l}<div class="pill" style="font-size:72px;padding:12px 40px;color:{L}">Primero,</div>{spark_r}</div>
-<div style="font-size:72px;margin-top:6px"><span class="hl">NO</span> haría descuentos.{rough_underline(260)}</div></div>
+<div style="text-align:center"><div class="row" style="justify-content:center">{spark_l}<div class="pill" style="font-size:66px;padding:12px 40px;color:{L}">Paso 1</div>{spark_r}</div>
+<div style="font-size:72px;margin-top:6px">Ordená tus <span class="hl">números.</span>{rough_underline(260)}</div></div>
 <div style="display:flex;gap:30px;margin-top:40px;align-items:flex-start">
 <div style="flex:1.1;display:flex;flex-direction:column;align-items:center;gap:14px">
-<div class="pill" style="text-align:center">Bajás precios para vender más.</div>
+<div class="pill" style="text-align:center">Invertís en anuncios sin saber tu margen.</div>
 <svg width="40" height="70"><path d="M20 5 L20 60 M6 46 L20 62 L34 46" stroke="{L}" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
-<div class="pill" style="text-align:center">Vendés más… pero <span class="hl">ganás menos.</span></div></div>
+<div class="pill" style="text-align:center">Vendés… pero <span class="hl">no sabés si ganás.</span></div></div>
 <div style="flex:1;height:420px;border:4px dashed {LI};border-radius:30px;display:grid;place-items:center;color:{L};font-size:32px;text-align:center">avatar<br>(pensativa)</div></div>
-<div class="pill" style="text-align:center;margin-top:40px;font-size:56px">Primero, tus números.<br><span class="hl" style="font-size:66px">Después, la publicidad.</span>{rough_underline(420)}</div>
+<div class="pill" style="text-align:center;margin-top:40px;font-size:56px">Con tu margen sabés<br><span class="hl" style="font-size:66px">cuánto podés invertir.</span>{rough_underline(420)}</div>
 <div class="foot" style="justify-content:center;margin-top:auto"><img src="flora-palabra-lila.png"> @floramarketing.ar</div></div>'''
 B_css=f'''*{{margin:0;padding:0;box-sizing:border-box}}body{{width:1080px;height:1350px;overflow:hidden;background:url(papel.png);font-family:'Caveat';color:{T}}}
 .s{{width:1080px;height:1350px;padding:120px 90px 70px;display:flex;flex-direction:column}}
