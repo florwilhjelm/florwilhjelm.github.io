@@ -1,0 +1,94 @@
+<!doctype html><html><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&display=swap" rel="stylesheet">
+<style>*{margin:0;padding:0;box-sizing:border-box}body{width:1080px;height:1920px;overflow:hidden;font-family:Andika;color:#3D2B4F;position:relative}
+#bg{position:absolute;inset:0;width:1080px;height:1920px}
+.sc{position:absolute;inset:0;display:none}
+.ln{position:absolute;left:90px;white-space:nowrap}
+.ch{opacity:0}
+.mk{background:linear-gradient(transparent 30%,#C9B6E4 30%,#C9B6E4 96%,transparent 96%) no-repeat;background-size:var(--w,0%) 100%;border-radius:10px;padding:0 6px}
+#doll{position:absolute;height:420px;z-index:10;transform-origin:50% 100%;display:none}
+#pen{position:absolute;width:96px;height:96px;z-index:11;display:none}
+#logo{position:absolute;left:50%;top:780px;height:84px;transform:translateX(-50%);opacity:0;z-index:12}
+</style></head><body>
+<img id="bg" src="file:///tmp/claude-0/-home-user-florwilhjelm-github-io/5e4f6baa-32bb-5f35-af43-3504e6ba9e43/scratchpad/bg-paper.jpg">
+<div class="sc" id="A">
+ <div class="ln" style="top:330px;font-size:74px" id="a1"></div>
+ <div class="ln" style="top:590px;font-size:74px" id="a2"></div>
+ <div class="ln" style="top:850px;font-size:62px;color:#8F79B3" id="a3"></div>
+</div>
+<div class="sc" id="B">
+ <div class="ln" style="top:220px;font-size:64px" id="b1"></div>
+ <div class="ln" style="top:305px;font-size:64px" id="b2"></div>
+ <div class="ln" style="top:390px;font-size:64px" id="b3"></div>
+</div>
+<div class="sc" id="D">
+ <div class="ln" style="top:250px;font-size:64px;color:#8F79B3;left:70px" id="d0"></div>
+ <div class="ln" style="top:450px;font-size:48px;left:70px" id="d1"></div>
+ <div class="ln" style="top:660px;font-size:48px;left:70px" id="d2"></div>
+ <div class="ln" style="top:870px;font-size:48px;left:70px" id="d3"></div>
+ <div class="ln" style="top:1080px;font-size:48px;left:70px" id="d4"></div>
+ <div class="ln" style="top:1290px;font-size:48px;left:70px" id="d5"></div>
+</div>
+<div class="sc" id="E">
+ <div class="ln" style="top:360px;font-size:66px" id="e1"></div>
+ <div class="ln" style="top:610px;font-size:92px"><span id="e2"></span><span class="mk" id="mkE"><span id="e3"></span></span></div>
+ <div class="ln" style="top:880px;font-size:66px" id="e4"></div>
+</div>
+<div class="sc" id="F" style="text-align:center">
+ <div style="position:absolute;left:80px;right:80px;top:300px;font-size:72px;line-height:1.2" id="f1">¿Querés estos resultados<br>para tu negocio?</div>
+ <div style="position:absolute;left:80px;right:80px;top:520px;font-size:58px;line-height:1.3;color:#8F79B3" id="f2">Escribime por MD<br>y lo vemos juntos 🌷</div>
+</div>
+<img id="doll" src="file:///tmp/claude-0/-home-user-florwilhjelm-github-io/5e4f6baa-32bb-5f35-af43-3504e6ba9e43/scratchpad/avatar-dl/muneca-sola.png">
+<svg id="pen" viewBox="0 0 100 100"><g transform="rotate(-62 50 50)"><rect x="44" y="6" width="12" height="62" rx="2" fill="#B9A3D9" stroke="#3D2B4F" stroke-width="2.5"/><rect x="44" y="6" width="12" height="9" fill="#F4B6C2" stroke="#3D2B4F" stroke-width="2.5"/><path d="M44 68 L50 88 L56 68 Z" fill="#F1E2C8" stroke="#3D2B4F" stroke-width="2.5"/><path d="M48 82 L50 88 L52 82 Z" fill="#3D2B4F"/></g></svg>
+<img id="logo" src="flora-palabra-lila.png">
+<script>
+const TX={a1:'Este local multiplicó por 4',a2:'su facturación en 60 días.',a3:'Te cuento qué cambiamos 👇',
+b1:'Vendía bien en el local,',b2:'pero online casi nada…',b3:'y no podía escalar.',
+d0:'Lo que cambiamos:',d1:'✓ Ordenamos la oferta',d2:'✓ Optimizamos la tienda',d3:'✓ Reestructuramos la comunicación',d4:'✓ Armamos una estrategia de contenido',d5:'✓ Anuncios con videos del local',
+e1:'Y lo que conseguimos:',e2:'3.000 → ',e3:'13.000 USD',e4:'en 60 días 📈'};
+for(const k in TX){document.getElementById(k).innerHTML=[...TX[k]].map(c=>'<span class="ch">'+(c==' '?' ':c)+'</span>').join('')}
+// writing schedule [id,start,end,withPen]
+const WR=[['a1',0.15,1.35,1],['a2',1.45,2.55,1],['a3',2.65,3.25,1],
+['b1',4.15,4.85,0],['b2',4.9,5.55,0],['b3',5.6,6.2,0],
+['d0',8.6,9.3,1],['d1',9.4,10.2,1],['d2',10.25,11.05,1],['d3',11.1,12.2,1],['d4',12.25,13.4,1],['d5',13.45,14.4,1],
+['e1',14.55,15.3,1],['e2',15.35,15.75,1],['e3',15.75,16.35,1],['e4',16.4,16.9,1]];
+const SC=[['A',0,4],['B',4,7],['C',7,8.5],['D',8.5,14.5],['E',14.5,17],['F',17,19.01]];
+const B_FR=90,C_FR=45, IMG=(p)=>'file:///tmp/claude-0/-home-user-florwilhjelm-github-io/5e4f6baa-32bb-5f35-af43-3504e6ba9e43/scratchpad/'+p;
+const bg=document.getElementById('bg'),doll=document.getElementById('doll'),pen=document.getElementById('pen');
+let pos={};
+window.prep=()=>{for(const [id] of WR){pos[id]=[...document.getElementById(id).querySelectorAll('.ch')].map(c=>{const st=c.style.opacity;const r=c.getBoundingClientRect();return [r.right,r.bottom]})}};
+function sc(t){for(const [n,s,e] of SC) if(t>=s&&t<e) return [n,s,e];return ['F',17,19]}
+const ease=k=>k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;
+window.render=t=>{
+ const [cur,s0]=sc(t);
+ document.querySelectorAll('.sc').forEach(e=>e.style.display='none');
+ if(cur!=='C')document.getElementById(cur).style.display='block';
+ // background
+ let src='bg-paper.jpg';
+ if(cur==='B'){src='vB/b'+String(Math.min(B_FR,1+Math.floor((t-4)*30))).padStart(3,'0')+'.jpg'}
+ if(cur==='C'){src='vC/c'+String(Math.min(C_FR,1+Math.floor((t-7)*30))).padStart(3,'0')+'.jpg'}
+ const u=IMG(src);if(bg.dataset.s!==u){bg.src=u;bg.dataset.s=u}
+ // writing
+ let tip=null,lastEnd=null,nextStart=null;
+ for(const [id,s,e,wp] of WR){const cs=document.getElementById(id).querySelectorAll('.ch');const n=cs.length;const k=Math.max(0,Math.min(1,(t-s)/(e-s)));const v=Math.floor(k*n+1e-6);cs.forEach((c,i)=>c.style.opacity=i<v?1:0);
+   if(wp&&t>=s&&t<e){const f=k*n;const i0=Math.max(0,Math.min(n-1,Math.floor(f)));const a=pos[id][Math.max(0,i0-1)]||pos[id][0],b=pos[id][i0];const fr=f-Math.floor(f);tip=[a[0]+(b[0]-a[0])*fr,b[1]-8]}}
+ document.getElementById('mkE').style.setProperty('--w',Math.max(0,Math.min(1,(t-16.35)/0.4))*100+'%');
+ // pen between segments of same scene: interpolate
+ if(!tip && (cur==='A'||cur==='D'||cur==='E')){let prev=null,next=null;for(const w of WR){if(!w[3])continue;if(w[2]<=t)prev=w;if(w[1]>t&&!next)next=w}
+   if(prev&&next&&sc(prev[1])[0]===cur&&sc(next[1])[0]===cur){const p=pos[prev[0]].at(-1),q=pos[next[0]][0];const k=ease((t-prev[2])/(next[1]-prev[2]));tip=[p[0]+(q[0]-p[0])*k,(p[1]+(q[1]-p[1])*k)-8-Math.sin(k*Math.PI)*70]}
+   else if(prev&&sc(prev[1])[0]===cur){const p=pos[prev[0]].at(-1);tip=[p[0],p[1]-8]}
+   else if(next&&sc(next[1])[0]===cur){const q=pos[next[0]][0];tip=[q[0],q[1]-8]}}
+ // doll
+ const DH=cur==='D'?300:(cur==='F'?440:360),SCL=DH/1218,HX=150*SCL,HY=660*SCL;doll.style.height=DH+'px';
+ if(cur==='A'||cur==='D'||cur==='E'){doll.style.display='block';pen.style.display='block';
+   let tx=tip[0],ty=tip[1];const hx=tx+58,hy=ty-26;let L=hx-HX,T=hy-HY;
+   let sx=1,rot=Math.sin(t*14)*2.2,bob=Math.abs(Math.sin(t*14))*-6;
+   if(cur==='A'&&t>3.3){const k=(t-3.3)/0.7;sx=Math.cos(k*Math.PI*2);bob=-Math.sin(Math.min(1,k)*Math.PI)*60;rot=0}
+   if(cur==='E'&&t>16.9){const k=(t-16.9)/0.1;bob=-Math.abs(Math.sin(t*9))*25;rot=Math.sin(t*9)*4}
+   doll.style.left=L+'px';doll.style.top=(T+bob)+'px';doll.style.transform='rotate('+rot+'deg) scaleX('+sx+')';
+   pen.style.left=(tx-14)+'px';pen.style.top=(ty-82+bob)+'px';pen.style.display=(cur==='A'&&t>3.3)?'none':'block';
+ } else if(cur==='F'){doll.style.display='block';pen.style.display='none';const b=-Math.abs(Math.sin((t-17)*7))*45;doll.style.left=(540-DH*452/1218/2)+'px';doll.style.top=(960+b)+'px';doll.style.transform='rotate('+Math.sin(t*7)*5+'deg)'}
+ else {doll.style.display='none';pen.style.display='none'}
+ document.getElementById('f1').style.opacity=Math.min(1,Math.max(0,(t-17.05)/.3));document.getElementById('f2').style.opacity=Math.min(1,Math.max(0,(t-17.45)/.3));
+ document.getElementById('logo').style.opacity=Math.min(1,Math.max(0,(t-17.8)/.3));
+};
+</script></body></html>
