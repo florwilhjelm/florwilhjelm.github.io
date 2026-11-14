@@ -116,6 +116,12 @@
 
     /* TESTIMONIOS */
     .bg-beige { background: var(--beige); }
+    .capturas { display: grid; grid-template-columns: 1.1fr 1fr; gap: 22px; align-items: start; margin-bottom: 46px; }
+    .capturas figure { background: #fff; border-radius: var(--radio); padding: 14px; box-shadow: 0 10px 26px rgba(61,43,79,.10); margin: 0; }
+    .capturas img { width: 100%; height: auto; border-radius: 12px; display: block; }
+    .cap-col { display: flex; flex-direction: column; gap: 22px; }
+    .cap-col figure:nth-child(1) { transform: rotate(-1.2deg); } .cap-col figure:nth-child(2) { transform: rotate(1deg); } .cap-col figure:nth-child(3) { transform: rotate(-.6deg); }
+    .mas-testis { font-size: 22px; margin-bottom: 18px; }
     .testis { columns: 3; column-gap: 18px; }
     .testi { break-inside: avoid; background: var(--crema); border-radius: var(--radio); padding: 26px; margin-bottom: 18px; }
     .testi q { display: block; font-family: 'Andika', sans-serif; font-size: 19px; color: var(--ciruela); line-height: 1.4; quotes: "“" "”"; }
@@ -164,6 +170,7 @@
       .hero .wrap, .servicios, .resultados, .rubros, .etapas { grid-template-columns: 1fr; }
       .senales, .pasos { grid-template-columns: 1fr 1fr; }
       .testis { columns: 1; }
+      .capturas { grid-template-columns: 1fr; }
       .stats { grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
       .stat b { font-size: 30px; }
       .stat span { font-size: 13px; }
@@ -297,7 +304,17 @@
     <div class="head">
       <span class="tag">Testimonios</span>
       <h2>Lo que dicen <i>mis clientes.</i></h2>
+      <p>Mensajes reales que me mandan mis clientes por WhatsApp.</p>
     </div>
+    <div class="capturas">
+      <figure class="cap-big"><img src="assets/testimonios/captura-49.jpg" alt="Captura de WhatsApp: ayer se despacharon 37 pedidos" loading="lazy" /></figure>
+      <div class="cap-col">
+        <figure><img src="assets/testimonios/captura-50.jpg" alt="Captura de WhatsApp: aumentamos un 45% la facturación" loading="lazy" /></figure>
+        <figure><img src="assets/testimonios/captura-51.jpg" alt="Captura de WhatsApp: 66 ventas en julio con dos creativos" loading="lazy" /></figure>
+        <figure><img src="assets/testimonios/captura-52.jpg" alt="Captura de WhatsApp: pasamos las 100 ventas en julio" loading="lazy" /></figure>
+      </div>
+    </div>
+    <h3 class="mas-testis">Más mensajes de clientes</h3>
     <div class="testis">
       <div class="testi"><q>Cuadruplicamos las ventas en un mes, invirtiendo lo mismo que el mes anterior y sin tanto contenido nuevo. Flor, real que SOS la uno.</q><span>Cliente ecommerce</span></div>
       <div class="testi"><q>La verdad una genialidad lo que hiciste y lograste. Desde el lunes a hoy ingresaron 11 ventas. ¡Sos una capa!</q><span>Cliente de moda</span></div>
