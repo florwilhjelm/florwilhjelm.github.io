@@ -1,0 +1,66 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;overflow:hidden;background:#E9DFD0;font-family:Andika;color:#3D2B4F;perspective:2600px}
+.page{position:absolute;left:60px;top:150px;width:960px;height:1560px;background:#FBF7F0;border-radius:18px;box-shadow:0 20px 50px rgba(61,43,79,.18);padding:110px 80px;transform-origin:0 50%;backface-visibility:hidden;overflow:hidden}
+.big{font-size:128px;line-height:1.1}.med{font-size:80px;line-height:1.28}.k{font-size:44px;color:#8F79B3}
+.mk{position:relative;display:inline;padding:0 8px;z-index:0;background:linear-gradient(transparent 0,transparent 30%,#C9B6E4 30%,#C9B6E4 96%,transparent 96%) no-repeat;background-size:var(--w,0%) 100%;border-radius:12px}
+.ch{opacity:0}
+.av{position:absolute;right:30px;bottom:210px;width:440px;transform-origin:50% 100%}
+.logo{position:absolute;left:80px;bottom:70px;height:58px}
+.pen{position:absolute;width:90px;height:90px;pointer-events:none;opacity:0;z-index:100}
+.step{display:flex;gap:26px;margin-top:56px;align-items:flex-start}.num{font-size:80px;color:#8F79B3;line-height:1}
+.flor{position:absolute;right:70px;top:70px}
+</style></head><body>
+<div id="stage"></div>
+<svg class="pen" id="pen" viewBox="0 0 100 100"><g transform="rotate(35 50 50)"><rect x="42" y="0" width="16" height="70" rx="3" fill="#C9B6E4" stroke="#3D2B4F" stroke-width="3"/><path d="M42 70 L50 92 L58 70 Z" fill="#F1E8DA" stroke="#3D2B4F" stroke-width="3"/><path d="M47 84 L50 92 L53 84 Z" fill="#3D2B4F"/></g></svg>
+<script>
+const AV='file:///tmp/claude-0/-home-user-florwilhjelm-github-io/5e4f6baa-32bb-5f35-af43-3504e6ba9e43/scratchpad/avatar-dl/';
+const flor='<svg width="60" height="60" viewBox="0 0 100 100"><g fill="none" stroke="#8F79B3" stroke-width="8">'+[0,1,2,3,4].map(i=>'<ellipse cx="50" cy="28" rx="15" ry="22" transform="rotate('+i*72+' 50 50)"/>').join('')+'</g><g fill="#FBF7F0">'+[0,1,2,3,4].map(i=>'<ellipse cx="50" cy="28" rx="15" ry="22" transform="rotate('+i*72+' 50 50)"/>').join('')+'</g><circle cx="50" cy="50" r="7" fill="none" stroke="#8F79B3" stroke-width="4"/></svg>';
+function chars(t,cls){return t.split('').map(c=>'<span class="ch '+(cls||'')+'">'+(c==' '?'&nbsp;':c)+'</span>').join('').replace(/&nbsp;<\/span>/g,' </span>')}
+// pages: each has html and writing segments [selector, tStart, tEnd]
+const P=[
+ {id:'p1',html:'<div class="flor">'+flor+'</div><div class="big" id="a1">'+chars('Tu local ya es conocido en tu ciudad.')+'</div><div class="med" style="margin-top:60px;max-width:620px"><span id="a2">'+chars('Ahora te toca expandirte a ')+'</span><span class="mk" id="m1"><span id="a3">'+chars('todo el país.')+'</span></span></div><img class="logo" src="flora-palabra-lila.png">'},
+ {id:'p2',html:'<div class="flor">'+flor+'</div><div class="big" style="font-size:112px" id="b1">'+chars('Tenés años en el rubro, clientes fieles y un producto que funciona.')+'</div><div class="med" style="margin-top:60px;max-width:600px" id="b2">'+chars('Lo que falta es que te encuentren en todo el país.')+'</div><img class="logo" src="flora-palabra-lila.png">'},
+ {id:'p3',html:'<div class="flor">'+flor+'</div><div class="k">el método</div><div class="big" style="font-size:112px" id="c0">'+chars('3 pasos para vender en todo el país')+'</div>'+
+   '<div class="step"><div class="num">1</div><div class="med" style="font-size:72px" id="c1">'+chars('Una tienda online lista para vender.')+'</div></div>'+
+   '<div class="step"><div class="num">2</div><div class="med" style="font-size:72px" id="c2">'+chars('Una estrategia de contenido para anuncios.')+'</div></div>'+
+   '<div class="step"><div class="num">3</div><div class="med" style="font-size:72px;max-width:470px" id="c3">'+chars('Contenido real de tu negocio.')+'</div></div><img class="logo" src="flora-palabra-lila.png">'},
+ {id:'p4',html:'<div class="flor">'+flor+'</div><div class="med" id="d1" style="max-width:780px">'+chars('Un local de deportes trabajó todo esto conmigo y pasó de facturar')+'</div><div class="big" style="font-size:118px;margin-top:30px"><span id="d2">'+chars('3.000 → ')+'</span><span class="mk" id="m4"><span id="d3">'+chars('13.000 USD')+'</span></span></div><div class="med" id="d4">'+chars('en un mes.')+'</div><div class="med" style="margin-top:90px;max-width:480px;font-size:62px" id="d5">'+chars('¿Lo vemos con tu negocio? Escribime EXPANDIR por MD 🌷')+'</div><img class="logo" src="flora-palabra-lila.png">'},
+];
+// timeline (seconds)
+const W=[ // [id, start, end]
+ ['a1',0.3,2.0],['a2',2.2,3.0],['a3',3.0,3.6],
+ ['b1',5.6,7.8],['b2',8.0,9.4],
+ ['c0',11.3,12.6],['c1',13.0,14.2],['c2',14.5,15.8],['c3',16.1,17.1],
+ ['d1',19.6,21.0],['d2',21.1,21.5],['d3',21.5,22.1],['d4',22.2,22.6],['d5',23.0,24.6]];
+const MK=[['m1',3.6,4.1],['m4',22.1,22.6]];
+const TURNS=[[4.6,5.4,'p1','p2'],[10.0,10.9,'p2','p3'],[18.2,19.1,'p3','p4']];
+// avatar schedule: [tStart,tEnd,pose]
+const AVS=[[0,3.2,'avatar-pensativa.png'],[3.2,4.6,'avatar-senalando.png'],[5.3,10.0,'avatar-frustrada.png'],[10.8,18.2,'avatar-senalando.png'],[19.0,26,'avatar-contenta.png']];
+const stage=document.getElementById('stage');
+P.forEach((p,i)=>{const d=document.createElement('div');d.className='page';d.id=p.id;d.innerHTML=p.html;d.style.zIndex=10-i;stage.appendChild(d)});
+const av=document.createElement('img');av.className='av';av.style.zIndex=20;stage.appendChild(av);
+const pen=document.getElementById('pen');
+window.render=function(t){
+ // page visibility & turns
+ let cur='p1';
+ P.forEach((p,i)=>{const el=document.getElementById(p.id);el.style.transform='none';el.style.display='none';el.style.zIndex=10-i;});
+ let shown=['p1'];
+ for(const [s,e,a,b] of TURNS){ if(t>=e){shown=[b]} else if(t>=s){shown=[a,b]; const k=(t-s)/(e-s); const ea=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2; const el=document.getElementById(a); el.style.transform='rotateY('+(-180*ea)+'deg)'; el.style.zIndex=50; } }
+ shown.forEach(id=>document.getElementById(id).style.display='block');
+ // writing
+ let writing=null;
+ for(const [id,s,e] of W){const sp=document.getElementById(id).querySelectorAll('.ch');const n=sp.length;const k=Math.max(0,Math.min(1,(t-s)/(e-s)));const v=Math.floor(k*n);sp.forEach((c,j)=>c.style.opacity=j<v?1:0);if(k>0&&k<1&&v>0)writing=sp[v-1];}
+ for(const [id,s,e] of MK){const k=Math.max(0,Math.min(1,(t-s)/(e-s)));document.getElementById(id).style.setProperty('--w',(k*100)+'%')}
+ if(writing && writing.offsetParent){const r=writing.getBoundingClientRect();pen.style.opacity=1;pen.style.left=(r.right-10)+'px';pen.style.top=(r.bottom-80)+'px'}else pen.style.opacity=0;
+ // avatar
+ let pose=null,ps=0;for(const [s,e,p] of AVS){if(t>=s&&t<e){pose=p;ps=s}}
+ const turning=TURNS.some(([s,e])=>t>=s&&t<e);
+ if(pose&&!turning){av.style.display='block';if(av.dataset.p!==pose){av.src=AV+pose;av.dataset.p=pose}
+   const in_=Math.min(1,(t-ps)/0.25); const bob=Math.sin(t*3.2)*6; const tilt=Math.sin(t*2.1)*1.5;
+   av.style.transform='translateY('+(bob+(1-in_)*40)+'px) rotate('+tilt+'deg) scale('+(0.92+0.08*in_)+')';av.style.opacity=in_;}
+ else av.style.display='none';
+};
+</script></body></html>
