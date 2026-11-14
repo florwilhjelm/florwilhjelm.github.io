@@ -1,0 +1,66 @@
+<!doctype html><html><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&display=swap" rel="stylesheet">
+<style>*{margin:0;padding:0;box-sizing:border-box}body{width:1080px;height:1920px;overflow:hidden;font-family:Andika;color:#3D2B4F;position:relative;perspective:2400px}
+.bg{position:absolute;inset:0;width:1080px;height:1920px}
+.sc{position:absolute;inset:0;display:none}
+.t{position:absolute;left:90px;right:90px}
+.ch{opacity:0}
+.mk{background:linear-gradient(transparent 30%,#C9B6E4 30%,#C9B6E4 96%,transparent 96%) no-repeat;background-size:var(--w,0%) 100%;border-radius:10px;padding:0 6px}
+#doll{position:absolute;transform-origin:50% 100%;z-index:10;filter:drop-shadow(0 18px 10px rgba(61,43,79,.18))}
+#flip{position:absolute;inset:0;transform-origin:0 50%;z-index:20;display:none;box-shadow:-30px 0 60px rgba(61,43,79,.25)}
+#flip img{width:100%;height:100%}
+#logo{position:absolute;left:50%;top:790px;height:84px;transform:translateX(-50%);opacity:0;z-index:12}
+.li{font-size:50px;line-height:1.3;white-space:nowrap}
+</style></head><body>
+<img class="bg" src="file:///tmp/claude-0/-home-user-florwilhjelm-github-io/5e4f6baa-32bb-5f35-af43-3504e6ba9e43/scratchpad/bg-paper.jpg">
+<div class="sc" id="A"><div class="t" style="top:300px;font-size:88px;line-height:1.12">Este local multiplicó por 4 su facturación.</div><div class="t" style="top:640px;font-size:66px;color:#8F79B3">Te cuento qué cambiamos 👇</div></div>
+<div class="sc" id="B"><div class="t" style="top:300px;font-size:78px;line-height:1.18" id="b1"></div></div>
+<div class="sc" id="D"><div class="t" style="top:230px;font-size:72px;color:#8F79B3" id="d0"></div>
+ <div class="t li" style="top:340px;right:auto" id="dl"></div></div>
+<div class="sc" id="E"><div class="t" style="top:220px;font-size:70px;line-height:1.15">Y lo que conseguimos <span class="mk" id="mkE">en 60 días:</span></div>
+ <svg class="t" style="top:430px" width="900" height="760" viewBox="0 0 900 760" id="chart"></svg></div>
+<div class="sc" id="F" style="text-align:center"><div class="t" style="top:300px;font-size:76px;line-height:1.18" id="f1">¿Querés estos resultados para tu negocio?</div>
+ <div class="t" style="top:560px;font-size:60px;line-height:1.3;color:#8F79B3" id="f2">Escribime por MD y lo vemos juntos 🌷</div></div>
+<img id="doll">
+<div id="flip"><img src="file:///tmp/claude-0/-home-user-florwilhjelm-github-io/5e4f6baa-32bb-5f35-af43-3504e6ba9e43/scratchpad/bg-paper.jpg"></div>
+<img id="logo" src="flora-palabra-lila.png">
+<script>
+const P='file:///tmp/claude-0/-home-user-florwilhjelm-github-io/5e4f6baa-32bb-5f35-af43-3504e6ba9e43/scratchpad/3d/c-';
+function chars(el,txt){el.innerHTML=[...txt].map(c=>'<span class="ch">'+(c==' '?' ':c)+'</span>').join('')}
+chars(b1,'Vendía bien en el local, pero online casi nada… y no podía escalar.');
+chars(d0,'Lo que cambiamos:');
+const L=['✓ Ordenamos la oferta','✓ Optimizamos la tienda','✓ Reestructuramos la comunicación','✓ Armamos una estrategia de contenido','✓ Anuncios con videos grabados en el local'];
+dl.innerHTML=L.map((l,i)=>'<div id="l'+i+'"></div>').join('');L.forEach((l,i)=>chars(document.getElementById('l'+i),l));
+// chart
+const V=[5.8,6.5,7.4,7.9,19.2],M=['Ene','Feb','Mar','Abr','May'];let g='';
+for(let k=0;k<=5;k++){const y=640-k*24*5;g+='<line x1="110" x2="880" y1="'+y+'" y2="'+y+'" stroke="#3D2B4F" stroke-opacity=".12"/><text x="95" y="'+(y+12)+'" text-anchor="end" font-size="34" fill="#3D2B4F" fill-opacity=".7">'+(k*5)+(k?'M':'')+'</text>'}
+V.forEach((v,i)=>{const x=150+i*148;g+='<rect id="bar'+i+'" x="'+x+'" width="110" rx="16" y="640" height="0" fill="'+(i==4?'#8F79B3':'#C9B6E4')+'"/><text x="'+(x+55)+'" y="690" text-anchor="middle" font-size="36" fill="#3D2B4F">'+M[i]+'</text>'});
+g+='<text id="lbl" x="'+(150+4*148+55)+'" y="0" text-anchor="middle" font-size="44" font-weight="700" fill="#8F79B3" opacity="0">19M</text>';
+g+='<text x="500" y="745" text-anchor="middle" font-size="34" fill="#3D2B4F" fill-opacity=".7">Facturación por mes</text>';chart.innerHTML=g;
+const SC=[['A',0,4],['B',4,7.6],['D',7.6,12],['E',12,15],['F',15,17.01]];
+const cl=(x)=>Math.max(0,Math.min(1,x));const ease=k=>k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;
+function wr(el,t,a,b){const c=el.querySelectorAll('.ch'),n=c.length,v=Math.floor(cl((t-a)/(b-a))*n+1e-6);c.forEach((x,i)=>x.style.opacity=i<v?1:0)}
+function pose(t){if(t<4)return['sonrie',700,70,'l'];if(t<7)return['triste',640,70,'l'];if(t<7.6)return['idea',690,70,'l'];if(t<12)return['espalda',640,0,'c'];if(t<15)return['sonrie',380,0,'c'];return['saluda',560,0,'c']}
+window.render=t=>{
+ let cur='F';for(const[n,s,e]of SC)if(t>=s&&t<e)cur=n;
+ document.querySelectorAll('.sc').forEach(e=>e.style.display='none');document.getElementById(cur).style.display='block';
+ wr(b1,t,4.15,5.6);wr(d0,t,8.3,8.75);
+ const ls=[[8.8,9.35],[9.4,9.95],[10.0,10.65],[10.7,11.35],[11.4,11.95]];L.forEach((l,i)=>wr(document.getElementById('l'+i),t,ls[i][0],ls[i][1]));
+ document.getElementById('mkE').style.setProperty('--w',cl((t-12.3)/.4)*100+'%');
+ V.forEach((v,i)=>{const k=ease(cl((t-12.6-i*0.18)/0.6));const h=v*24*k;const r=document.getElementById('bar'+i);r.setAttribute('y',640-h);r.setAttribute('height',h)});
+ const lk=cl((t-13.9)/.3);lbl.setAttribute('y',640-19.2*24-16);lbl.setAttribute('opacity',lk);
+ f1.style.opacity=cl((t-15.05)/.3);f2.style.opacity=cl((t-15.4)/.3);logo.style.opacity=cl((t-15.8)/.3);
+ // doll
+ const [n,h,ml,side]=pose(t);const src=P+n+'.png';if(doll.dataset.s!==src){doll.src=src;doll.dataset.s=src}
+ doll.style.height=h+'px';const w=h*({sonrie:482/1237,triste:535/1105,idea:504/1198,espalda:464/1230,saluda:598/1339})[n];
+ let x=side==='l'?ml:(side==='c'?540-w/2:1080-w-40);let top=1560-h;
+ const seg=[0,4,7,7.6,12,15].filter(s=>s<=t).pop();const pin=cl((t-seg)/0.18);
+ let bob=-Math.abs(Math.sin(t*5.5))*14,rot=Math.sin(t*3)*1.5,sy=1;
+ if(n==='espalda'){bob=-Math.abs(Math.sin(t*2.2))*6;rot=Math.sin(t*1.6)*2}
+ if(n==='saluda'){bob=-Math.abs(Math.sin(t*7))*30;rot=Math.sin(t*7)*4}
+ if(n==='idea'){bob=-Math.sin(cl((t-7)/.35)*Math.PI)*70}
+ if(n==='triste'){bob=0;rot=Math.sin(t*1.2)*1}
+ sy=1-0.12*(1-pin)+0.0;doll.style.left=x+'px';doll.style.top=(top+bob)+'px';doll.style.transform='rotate('+rot+'deg) scaleY('+sy+') scaleX('+(2-sy)+')';doll.style.opacity=t>=7.6&&t<8.3?0:1;
+ // flip 7.6-8.3
+ if(t>=7.6&&t<8.3){flip.style.display='block';const k=ease(cl((t-7.6)/.7));flip.style.transform='rotateY('+(-180*k)+'deg)';flip.style.opacity=k>.5?0:1}else flip.style.display='none';
+};
+</script></body></html>
