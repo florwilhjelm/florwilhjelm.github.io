@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&display=swap" rel="stylesheet">
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{background:transparent}body{width:1080px;height:1920px;overflow:hidden;font-family:Andika;color:#3D2B4F;position:relative}
+.blk{position:absolute;opacity:0}.big{font-size:96px;line-height:1.1}.med{font-size:66px;line-height:1.25}
+.mk{display:inline;padding:0 8px;background:linear-gradient(transparent 30%,#C9B6E4 30%,#C9B6E4 96%,transparent 96%) no-repeat;background-size:var(--w,0%) 100%;border-radius:12px}
+.cap{background:rgba(251,247,240,.92);border-radius:28px;padding:22px 34px;font-size:64px;box-shadow:0 10px 30px rgba(61,43,79,.15)}
+.ch{opacity:0}.logo{position:absolute;left:50%;bottom:90px;height:70px;transform:translateX(-50%);opacity:0}</style></head><body>
+<div class="blk" id="t1" style="left:80px;top:150px;width:920px"><div class="big">Tu local ya es conocido en tu ciudad.</div><div class="med" style="margin-top:34px">Ahora te toca expandirte a <span class="mk" id="mk1">todo el país.</span></div></div>
+<div class="blk cap" id="t2" style="left:50%;bottom:220px;transform:translateX(-50%);white-space:nowrap">¿Y ahora cómo llego? 😟</div>
+<div class="blk cap" id="t3" style="left:50%;top:230px;transform:translateX(-50%);white-space:nowrap">¡Ya sé! 💡</div>
+<div class="blk" id="t4" style="left:80px;top:1230px;width:900px;opacity:1"><div class="med" id="w1"></div><div class="med" style="margin-top:28px"><span id="w2"></span><span class="mk" id="mk2"><span id="w3"></span></span></div></div>
+<img class="logo" id="logo" src="flora-palabra-lila.png">
+<script>
+function sp(el,t){el.innerHTML=t.split('').map(c=>'<span class="ch">'+(c==' '?' ':c)+'</span>').join('')}
+sp(w1,'Tenés años en el rubro, clientes fieles y un producto que funciona.');sp(w2,'Ahora te toca expandirte a ');sp(w3,'todo el país.');
+const fade=(t,a,b,f=.3)=>t<a||t>b?0:Math.min(1,(t-a)/f,(b-t)/f);
+function write(el,t,a,b){const c=el.querySelectorAll('.ch'),n=c.length,k=Math.max(0,Math.min(1,(t-a)/(b-a))),v=Math.floor(k*n);c.forEach((x,i)=>x.style.opacity=i<v?1:0)}
+window.render=t=>{t1.style.opacity=fade(t,0.2,4.0);mk1.style.setProperty('--w',Math.max(0,Math.min(1,(t-1.4)/0.6))*100+'%');
+t2.style.opacity=fade(t,4.6,8.0);t3.style.opacity=fade(t,8.4,10.2);
+write(w1,t,12.3,15.6);write(w2,t,15.8,16.9);write(w3,t,16.9,17.6);mk2.style.setProperty('--w',Math.max(0,Math.min(1,(t-17.7)/0.5))*100+'%');
+logo.style.opacity=Math.max(0,Math.min(1,(t-18.3)/0.5));}
+</script></body></html>
