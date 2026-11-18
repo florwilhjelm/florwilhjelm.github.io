@@ -27,8 +27,8 @@ f'''<div class="t" style="font-size:96px">No te falta tecnología.</div>
 <img class="av" src="avatar-senalando.png" style="right:10px;height:600px">''',
 f'''<div class="t" style="font-size:78px">Te armé una guía con <span class="mk">5 cosas que podés cambiar hoy</span> en tu negocio</div>
 <div style="margin-top:60px">{lista}</div>''',
-f'''<div class="t" style="font-size:92px;margin-top:40px">Respondé <span class="mk">IA</span><br>y te la mando 💌</div>
-<div class="b l" style="margin-top:40px;max-width:700px">gratis, directo a tu DM</div>
-<img class="av" src="avatar-contenta.png" style="right:20px;height:700px">''',
+f'''<div class="t" style="font-size:92px;margin-top:40px"><span class="mk">Hablame</span><br>y te la envío</div>
+<div class="b l" style="margin-top:40px;max-width:700px">Gratis, directo a tu DM</div>
+<img class="av" src="avatar-contenta.png" style="right:60px;bottom:130px;height:560px;-webkit-mask-image:linear-gradient(#000 82%,transparent)">''',
 ]
 for i,b in enumerate(S,1): open(f'slide-{i}.html','w').write(page(b))
